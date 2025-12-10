@@ -196,8 +196,8 @@ export default function Home() {
       </div>
 
       {/* 9. SUBSCRIBE */}
-      <Newsletter />
-      
+      <Subscription />
+
       <Footer />
     </div>
   );
