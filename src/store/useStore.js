@@ -3,7 +3,7 @@ import { create } from 'zustand';
 export const useStore = create((set, get) => ({
   // --- Data & Cart ---
   cart: [],
-  selectedCategory: "All", 
+  selectedCategory: "All PRODUCTS", 
   
   // --- UI States ---
   isCartOpen: false,
