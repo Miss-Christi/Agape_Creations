@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-export default function Newsletter() {
+export default function Subscription() {
   const [result, setResult] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -14,7 +14,7 @@ export default function Newsletter() {
     const formData = new FormData(event.target);
 
     // KEY SETTINGS
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "76e0e92a-b0da-49f1-ae79-d447e5f83732");
     formData.append("subject", "New Newsletter Subscriber"); // Subject line for your email
     formData.append("from_name", "Agape Website");
 
