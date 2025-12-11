@@ -7,7 +7,7 @@ export const PRODUCTS = [
       category: "Apparel", 
       name: "Agape Boxy Tee", 
       basePrice: 350, 
-      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80", 
+      image: "https://www.naptimefaith.com/cdn/shop/files/pepper_48f5e724-b7f3-4dcd-b66b-de90751b5a40.png?v=1758888273&width=900", 
       description: "A premium heavyweight cotton tee designed with a modern boxy silhouette. Soft yet structured, it offers an oversized fit perfect for layering or everyday wear. The fabric holds its shape, making it ideal for both comfort and style throughout the day.", 
       hasVariants: true, 
       variants: [{ name: "Size", options: ["S", "M", "L", "XL"] }] 
@@ -27,7 +27,7 @@ export const PRODUCTS = [
       category: "Apparel", 
       name: "Salt & Light Cap", 
       basePrice: 200, 
-      image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80", 
+      image: "https://resourceboy.com/wp-content/uploads/2021/09/baseball-editable-sports-cap-mockup-thumbnail.jpg", 
       description: "A classic embroidered dad hat featuring a subtle but bold reminder to be salt and light in the world. Made with breathable cotton and an adjustable strap for a comfortable everyday fit.", 
       hasVariants: false 
     },
@@ -36,7 +36,7 @@ export const PRODUCTS = [
       category: "Apparel", 
       name: "Grace Carrier Tote", 
       basePrice: 250, 
-      image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80", 
+      image: "https://i.etsystatic.com/26851641/r/il/aa0a52/5069496363/il_1080xN.5069496363_csb2.jpg", 
       description: "A sturdy canvas tote built for busy days at school, church, or the market. Its heavyweight material ensures long-term durability while offering a soft, natural feel. Spacious enough to carry books, groceries, and everyday essentials.", 
       hasVariants: false 
     },
@@ -45,7 +45,7 @@ export const PRODUCTS = [
       category: "Apparel", 
       name: "Truth Cap", 
       basePrice: 200, 
-      image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80", 
+      image: "https://i.etsystatic.com/40647940/r/il/c3034e/5898740672/il_1588xN.5898740672_a416.jpg", 
       description: "A minimal yet meaningful cap crafted from breathable cotton. Featuring clean linework and a comfortable fit, this piece serves as a daily reminder to walk in truth wherever you go.", 
       hasVariants: false 
     },

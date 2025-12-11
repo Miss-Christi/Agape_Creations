@@ -9,7 +9,7 @@ export default function CategoryBar() {
     { name: "All", icon: <Sparkles size={18} /> },
     { name: "Apparel", icon: <Shirt size={18} /> },
     { name: "Stationery", icon: <BookOpen size={18} /> },
-    { name: "Home", icon: <Home size={18} /> },
+    { name: "Home Decor", icon: <Home size={18} /> },
     { name: "Gifts", icon: <Gift size={18} /> },
     { name: "Posters", icon: <Coffee size={18} /> },
   ];
