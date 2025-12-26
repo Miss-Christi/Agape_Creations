@@ -334,7 +334,7 @@ export const PRODUCTS = [
       {
         id: "po30",
         category: "Posters",
-        name: "The Boss – Jesus (The Chosen)",
+        name: "The Boss  Jesus (The Chosen)",
         basePrice: 299,
         image: "https://placeholder.co/po30.jpg",
         description: "Bold poster portraying Jesus as authority and leader, inspired by The Chosen.",
