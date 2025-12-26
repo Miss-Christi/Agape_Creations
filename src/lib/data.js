@@ -29,8 +29,7 @@ export const PRODUCTS = [
       { id: "bk22", category: "Bookmarks", name: "Let All That You Do Be Done in Love", basePrice: 79, image: "https://placeholder.co/bk22.jpg", description: "Scripture-based reminder for daily living.", hasVariants: false },
       { id: "bk23", category: "Bookmarks", name: "Do Not Fear, I Am With You", basePrice: 79, image: "https://placeholder.co/bk23.jpg", description: "Isaiah-inspired encouragement bookmark.", hasVariants: false },
     
-    // --- POSTERS (Diaries, Bookmarks) ---
-    const posters = [
+    // --- POSTERS ---
       {
         id: "po1",
         category: "Posters",
@@ -340,7 +339,334 @@ export const PRODUCTS = [
         description: "Bold poster portraying Jesus as authority and leader, inspired by The Chosen.",
         hasVariants: true,
         variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
-      }
+      },
+
+      // --- DIARIES ---
+      {
+        id: "di1",
+        category: "Diaries",
+        name: "Watercolor Cross Diary",
+        basePrice: 499,
+        image: "https://placeholder.co/di1.jpg",
+        description: "A soft watercolor cross design symbolising sacrifice, grace, and quiet reflection. Ideal for prayer journaling and personal notes.",
+        hasVariants: false
+      },
+      {
+        id: "di2",
+        category: "Diaries",
+        name: "Trust in the Lord Diary",
+        basePrice: 499,
+        image: "https://placeholder.co/di2.jpg",
+        description: "Inspired by Proverbs, this diary encourages surrender, faith, and wholehearted trust in God.",
+        hasVariants: false
+      },
+      {
+        id: "di3",
+        category: "Diaries",
+        name: "For I Know the Plans – Daughter of the King",
+        basePrice: 549,
+        image: "https://placeholder.co/di3.jpg",
+        description: "A Jeremiah 29:11 inspired design blended with Daughter of the King identity. Created for purpose-filled journaling.",
+        hasVariants: false
+      },
+      {
+        id: "di4",
+        category: "Diaries",
+        name: "The Boss – Jesus (The Chosen)",
+        basePrice: 549,
+        image: "https://placeholder.co/di4.jpg",
+        description: "Bold diary design portraying Jesus as authority and leader, inspired by The Chosen series.",
+        hasVariants: false
+      },
+      {
+        id: "di5",
+        category: "Diaries",
+        name: "Chosen, Loved, Beautiful Diary",
+        basePrice: 499,
+        image: "https://placeholder.co/di5.jpg",
+        description: "Affirmation-based diary celebrating identity, worth, and belonging in Christ.",
+        hasVariants: false
+      },
+      {
+        id: "di6",
+        category: "Diaries",
+        name: "Daughter of the King – Light Skin Diary",
+        basePrice: 499,
+        image: "https://placeholder.co/di6.jpg",
+        description: "An identity-affirming diary reminding you of your royal worth and calling in Christ.",
+        hasVariants: false
+      },
+      {
+        id: "di7",
+        category: "Diaries",
+        name: "Daughter of the King – Dark Skin Diary",
+        basePrice: 499,
+        image: "https://placeholder.co/di7.jpg",
+        description: "A representation-focused design celebrating dignity, identity, and faith.",
+        hasVariants: false
+      },
+      {
+        id: "di8",
+        category: "Diaries",
+        name: "Psalm 91 – Under His Wings Diary",
+        basePrice: 549,
+        image: "https://placeholder.co/di8.jpg",
+        description: "Psalm 91:4 inspired diary highlighting refuge, protection, and God’s covering wings.",
+        hasVariants: false
+      },
+      {
+        id: "di9",
+        category: "Diaries",
+        name: "Yeshua – Lion of Judah",
+        basePrice: 599,
+        image: "https://placeholder.co/di9.jpg",
+        description: "Powerful artwork of Yeshua as the Lion of Judah, symbolising authority, victory, and kingship.",
+        hasVariants: false
+      },
+      {
+        id: "di10",
+        category: "Diaries",
+        name: "With God All Things Are Possible",
+        basePrice: 499,
+        image: "https://placeholder.co/di10.jpg",
+        description: "Faith-forward typography diary inspired by Matthew 19:26, created to fuel hope and perseverance.",
+        hasVariants: false
+      },
+      {
+        id: "di11",
+        category: "Diaries",
+        name: "Just a Girl Who Loves Jesus",
+        basePrice: 499,
+        image: "https://placeholder.co/di11.jpg",
+        description: "Soft, modern diary design celebrating simple, everyday love for Jesus.",
+        hasVariants: false
+      },
+      {
+        id: "di12",
+        category: "Diaries",
+        name: "Saved by Grace Diary",
+        basePrice: 499,
+        image: "https://placeholder.co/di12.jpg",
+        description: "Minimal typography diary celebrating salvation through grace alone.",
+        hasVariants: false
+      },
+      {
+        id: "di13",
+        category: "Diaries",
+        name: "Let All That You Do Be Done in Love",
+        basePrice: 499,
+        image: "https://placeholder.co/di13.jpg",
+        description: "Scripture-inspired diary encouraging love as the foundation of all actions and decisions.",
+        hasVariants: false
+      },
+
+      // --- LAPTOP SKINS ---
+        {
+          id: "ls1",
+          category: "Laptop Skins",
+          name: "Thy Will Be Done – Gethsemane",
+          basePrice: 899,
+          image: "https://placeholder.co/ls1.jpg",
+          description: "Powerful artwork depicting Jesus in surrender at Gethsemane with the words 'Thy will be done'. A bold, faith-filled statement skin.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls2",
+          category: "Laptop Skins",
+          name: "We Love Because He Loved Us",
+          basePrice: 899,
+          image: "https://placeholder.co/ls2.jpg",
+          description: "Text-based faith design inspired by 1 John 4:19, combining scripture with modern visual elements.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls3",
+          category: "Laptop Skins",
+          name: "Virgin Mary – Sacred Art",
+          basePrice: 899,
+          image: "https://placeholder.co/ls3.jpg",
+          description: "Traditional Marian illustration with a reverent, devotional aesthetic suitable for daily inspiration.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls4",
+          category: "Laptop Skins",
+          name: "Daughter of the King – Illustration",
+          basePrice: 899,
+          image: "https://placeholder.co/ls4.jpg",
+          description: "Faith-based identity artwork celebrating dignity, strength, and belonging in Christ.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls5",
+          category: "Laptop Skins",
+          name: "Stained Glass Cross",
+          basePrice: 999,
+          image: "https://placeholder.co/ls5.jpg",
+          description: "Vibrant stained-glass cross artwork inspired by cathedral windows, rich in colour and symbolism.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls6",
+          category: "Laptop Skins",
+          name: "Of All Nations – Go & Make Disciples",
+          basePrice: 899,
+          image: "https://placeholder.co/ls6.jpg",
+          description: "Mission-focused design inspired by the Great Commission, combining text and symbolic illustration.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls7",
+          category: "Laptop Skins",
+          name: "Overwhelming Reckless Love",
+          basePrice: 899,
+          image: "https://placeholder.co/ls7.jpg",
+          description: "Expressive typographic skin inspired by the theme of God’s relentless love.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls8",
+          category: "Laptop Skins",
+          name: "Eucharistic Monstrance – Gold",
+          basePrice: 999,
+          image: "https://placeholder.co/ls8.jpg",
+          description: "Sacred Eucharistic artwork featuring a golden monstrance, ideal for reverent, devotional expression.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+      
+        {
+          id: "ls9",
+          category: "Laptop Skins",
+          name: "Your Will Be Done – Luke 22:42",
+          basePrice: 999,
+          image: "https://placeholder.co/ls9.jpg",
+          description: "Dramatic artwork of Jesus praying, paired with Luke 22:42, symbolising surrender and obedience.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+      
+        {
+          id: "ls10",
+          category: "Laptop Skins",
+          name: "Live With Purpose – Faith Values",
+          basePrice: 899,
+          image: "https://placeholder.co/ls10.jpg",
+          description: "Modern typographic list encouraging faith-driven living: love, work, serve, believe.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+      
+        {
+          id: "ls11",
+          category: "Laptop Skins",
+          name: "White & Gold Marble Abstract",
+          basePrice: 899,
+          image: "https://placeholder.co/ls11.jpg",
+          description: "Elegant marble texture with white, grey, and gold tones for a clean, premium aesthetic.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls12",
+          category: "Laptop Skins",
+          name: "Blue & Gold Marble Abstract",
+          basePrice: 899,
+          image: "https://placeholder.co/ls12.jpg",
+          description: "Flowing blue marble design with gold accents, subtle yet striking.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+        {
+          id: "ls13",
+          category: "Laptop Skins",
+          name: "Teal Rock & Gold Texture",
+          basePrice: 899,
+          image: "https://placeholder.co/ls13.jpg",
+          description: "Textured abstract artwork inspired by stone and mineral formations with gold detailing.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+      
+        {
+          id: "ls14",
+          category: "Laptop Skins",
+          name: "The Boss – Jesus (Minimal)",
+          basePrice: 899,
+          image: "https://placeholder.co/ls14.jpg",
+          description: "Minimal illustrated Jesus with bold 'The Boss' typography on a clean background.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+      
+        {
+          id: "ls15",
+          category: "Laptop Skins",
+          name: "Wings of Glory",
+          basePrice: 899,
+          image: "https://placeholder.co/ls15.jpg",
+          description: "Vibrant multicolour angel wings on a dark background, symbolising protection and strength.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+      
+        {
+          id: "ls16",
+          category: "Laptop Skins",
+          name: "Fishers of Men",
+          basePrice: 899,
+          image: "https://placeholder.co/ls16.jpg",
+          description: "Artistic illustration of fish forming a spiral with the words 'Fishers of Men'.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+      
+        {
+          id: "ls17",
+          category: "Laptop Skins",
+          name: "Be Strong and Courageous – Joshua 1:9",
+          basePrice: 899,
+          image: "https://placeholder.co/ls17.jpg",
+          description: "Scripture-based design inspired by Joshua 1:9, encouraging courage and faith.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+      
+        {
+          id: "ls18",
+          category: "Laptop Skins",
+          name: "XOXO  The Original Love Letters",
+          basePrice: 899,
+          image: "https://placeholder.co/ls18.jpg",
+          description: "Creative symbolic design representing Christ’s love through the cross and crown of thorns.",
+          hasVariants: true,
+          variants: [{ name: "Size", options: ["13-inch", "14-inch", "15.6-inch"] }]
+        },
+
+        // --- BADGES ---
+        
+        { id: "bd1", category: "Badges", name: "Butterfly Faith Badge", basePrice: 79, image: "https://placeholder.co/bd1.jpg", description: "Butterfly illustration symbolising transformation.", hasVariants: false },
+        { id: "bd2", category: "Badges", name: "Daughter of the King Badge", basePrice: 79, image: "https://placeholder.co/bd2.jpg", description: "Identity badge affirming royal belonging.", hasVariants: false },
+        { id: "bd3", category: "Badges", name: "Cross Minimal Badge", basePrice: 79, image: "https://placeholder.co/bd3.jpg", description: "Simple cross illustration.", hasVariants: false },
+        { id: "bd4", category: "Badges", name: "Jesus Loves You Badge", basePrice: 79, image: "https://placeholder.co/bd4.jpg", description: "Gentle reminder of Christ’s love.", hasVariants: false },
+        { id: "bd5", category: "Badges", name: "You Are Loved Badge", basePrice: 79, image: "https://placeholder.co/bd5.jpg", description: "Affirmation badge with soft floral art.", hasVariants: false },
+        { id: "bd6", category: "Badges", name: "Virgin Mary Badge", basePrice: 79, image: "https://placeholder.co/bd6.jpg", description: "Illustrated Marian devotional badge.", hasVariants: false },
+        { id: "bd7", category: "Badges", name: "Wings of Glory Badge", basePrice: 79, image: "https://placeholder.co/bd7.jpg", description: "Colourful wings symbolising protection.", hasVariants: false },
+        { id: "bd8", category: "Badges", name: "Heart Faith Badge", basePrice: 79, image: "https://placeholder.co/bd8.jpg", description: "Heart illustration representing love and faith.", hasVariants: false },
+        { id: "bd9", category: "Badges", name: "Coffee Cup Badge", basePrice: 79, image: "https://placeholder.co/bd9.jpg", description: "Cute illustrated coffee cup.", hasVariants: false },
+        { id: "bd10", category: "Badges", name: "Cat Illustration Badge", basePrice: 79, image: "https://placeholder.co/bd10.jpg", description: "Playful illustrated cat badge.", hasVariants: false },
+        { id: "bd11", category: "Badges", name: "Jesus Illustration Badge", basePrice: 79, image: "https://placeholder.co/bd11.jpg", description: "Soft illustrated portrait of Jesus.", hasVariants: false },
+        { id: "bd12", category: "Badges", name: "Faith Over Fear Badge", basePrice: 79, image: "https://placeholder.co/bd12.jpg", description: "Bold typography promoting courage in faith.", hasVariants: false },
+        { id: "bd13", category: "Badges", name: "Forever Kinda Love Badge", basePrice: 79, image: "https://placeholder.co/bd13.jpg", description: "Matthew 28:20 inspired love reminder.", hasVariants: false },
+        { id: "bd14", category: "Badges", name: "Holy Bible Badge", basePrice: 79, image: "https://placeholder.co/bd14.jpg", description: "Illustrated Bible badge.", hasVariants: false },
+        { id: "bd15", category: "Badges", name: "Angel Embrace Badge", basePrice: 79, image: "https://placeholder.co/bd15.jpg", description: "Angel illustration symbolising protection.", hasVariants: false }
     ];
   
 // This simulates a Database Query
