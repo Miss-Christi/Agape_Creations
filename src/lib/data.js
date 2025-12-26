@@ -1,300 +1,347 @@
 /* Mini Database */
 export const PRODUCTS = [
         
-      // --- APPAREL ---
-    { 
-      id: "ap1", 
-      category: "Apparel", 
-      name: "Agape Boxy Tee", 
-      basePrice: 350, 
-      image: "https://www.naptimefaith.com/cdn/shop/files/pepper_48f5e724-b7f3-4dcd-b66b-de90751b5a40.png?v=1758888273&width=900", 
-      description: "A premium heavyweight cotton tee designed with a modern boxy silhouette. Soft yet structured, it offers an oversized fit perfect for layering or everyday wear. The fabric holds its shape, making it ideal for both comfort and style throughout the day.", 
-      hasVariants: true, 
-      variants: [{ name: "Size", options: ["S", "M", "L", "XL"] }] 
-    },
-    { 
-      id: "ap2", 
-      category: "Apparel", 
-      name: "Chosen Hoodie - Sand", 
-      basePrice: 750, 
-      image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80", 
-      description: "A warm and durable hoodie crafted from premium fleece, finished with puff-print detailing that adds texture and visual depth. The sand-toned fabric pairs effortlessly with any outfit, making it a cozy and meaningful wardrobe staple.", 
-      hasVariants: true, 
-      variants: [{ name: "Size", options: ["S", "M", "L", "XL"] }] 
-    },
-    { 
-      id: "ap3", 
-      category: "Apparel", 
-      name: "Salt & Light Cap", 
-      basePrice: 200, 
-      image: "https://resourceboy.com/wp-content/uploads/2021/09/baseball-editable-sports-cap-mockup-thumbnail.jpg", 
-      description: "A classic embroidered dad hat featuring a subtle but bold reminder to be salt and light in the world. Made with breathable cotton and an adjustable strap for a comfortable everyday fit.", 
-      hasVariants: false 
-    },
-    { 
-      id: "ap4", 
-      category: "Apparel", 
-      name: "Grace Carrier Tote", 
-      basePrice: 250, 
-      image: "https://i.etsystatic.com/26851641/r/il/aa0a52/5069496363/il_1080xN.5069496363_csb2.jpg", 
-      description: "A sturdy canvas tote built for busy days at school, church, or the market. Its heavyweight material ensures long-term durability while offering a soft, natural feel. Spacious enough to carry books, groceries, and everyday essentials.", 
-      hasVariants: false 
-    },
-    { 
-      id: "ap5", 
-      category: "Apparel", 
-      name: "Truth Cap", 
-      basePrice: 200, 
-      image: "https://i.etsystatic.com/40647940/r/il/c3034e/5898740672/il_1588xN.5898740672_a416.jpg", 
-      description: "A minimal yet meaningful cap crafted from breathable cotton. Featuring clean linework and a comfortable fit, this piece serves as a daily reminder to walk in truth wherever you go.", 
-      hasVariants: false 
-    },
-    { 
-      id: "ap6", 
-      category: "Apparel", 
-      name: "Sunday Crewneck", 
-      basePrice: 550, 
-      image: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=800&q=80", 
-      description: "A soft and cozy crewneck designed for slow mornings and peaceful afternoons. The midweight fleece interior ensures warmth, while the relaxed fit makes it perfect for layering throughout the week.", 
-      hasVariants: true, 
-      variants: [{ name: "Size", options: ["S", "M", "L"] }] 
-    },
-    {
-      id: "ap7",
-      name: "Hope Anchor Hoodie",
-      category: "Apparel",
-      basePrice: 750,
-      description: "Made from a durable cotton blend, this hoodie features a comforting message inspired by the truth that hope anchors the soul. Its plush interior, relaxed fit, and timeless design make it a daily essential for cooler days.",
-      image: "https://goodmockups.com/wp-content/uploads/2022/04/Free-Hanging-Hoodie-Mockup-PSD.jpg",
-      hasVariants: true,
-      variants: [
-        { name: "Size", options: ["S", "M", "L", "XL"] }
-      ]
-    },
-
-    // --- STATIONERY (Diaries, Bookmarks) ---
-    { 
-      id: "st1", 
-      category: "Stationery", 
-      name: "Daily Prayer Journal", 
-      basePrice: 300, 
-      image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80", 
-      description: "A beautifully bound linen hardcover journal featuring thick 100gsm pages that prevent bleed-through. Designed for prayer, reflection, and gratitude, it provides structured prompts alongside open space for free writing.", 
-      hasVariants: false 
-    },
-    { 
-      id: "st2", 
-      category: "Stationery", 
-      name: "Floral Verse Bookmarks- Pack of 10", 
-      basePrice: 199, 
-      image: "https://images.unsplash.com/photo-1634961229506-4ee00b826131?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-      description: "A set of five gold-foil bookmarks adorned with delicate floral illustrations and uplifting Scripture verses. Perfect for marking pages in books, journals, or devotionals.", 
-      hasVariants: false 
-    },
-    { 
-      id: "st3", 
-      category: "Stationery", 
-      name: "Quiet Time Notebook", 
-      basePrice: 199, 
-      image: "https://plus.unsplash.com/premium_photo-1732020862179-e2ce4c18db5c?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UXVpZXQlMjBUaW1lJTIwTm90ZWJvb2t8ZW58MHx8MHx8fDA%3D", 
-      description: "A minimalist notebook crafted for daily reflections, sermon notes, or creative writing. The smooth matte cover and thick pages offer a clean, uncluttered writing experience.", 
-      hasVariants: false 
-    },
-    { 
-      id: "st4", 
-      category: "Stationery", 
-      name: "Planner 2025", 
-      basePrice: 350, 
-      image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80", 
-      description: "A thoughtfully designed 2025 planner featuring monthly layouts, weekly spreads, habit trackers, and reflection prompts. Crafted with a durable hardcover and smooth paper suitable for pens and highlighters.", 
-      hasVariants: false 
-    },
-    { 
-      id: "st5", 
-      category: "Stationery", 
-      name: "Pastel Highlighters", 
-      basePrice: 120, 
-      image: "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=800&q=80", 
-      description: "A gentle set of soft pastel highlighters perfect for Bible journaling, note-taking, and organizing. Designed to be low-bleed with a smooth glide for clean, aesthetic study sessions.", 
-      hasVariants: false 
-    },
-    { 
-      id: "st6", 
-      category: "Stationery", 
-      name: "Gold Foil Bookmarks - Set of 5", 
-      basePrice: 99, 
-      image: "https://m.media-amazon.com/images/I/81wI5kbPDAL.jpg", 
-      description: "Elegantly designed bookmarks with shimmering gold-foil accents. Durable yet lightweight, these bookmarks make beautiful gifts and thoughtful inserts for journals or devotionals.", 
-      hasVariants: false 
-    },
-    { 
-      id: "st7", 
-      category: "Stationery", 
-      name: "Leather Bible Case", 
-      basePrice: 349, 
-      image: "https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&w=800&q=80", 
-      description: "A premium faux-leather Bible case crafted for protection and style. Features interior pockets for notes, pens, and study essentials, with a secure zipper closure for easy carrying.", 
-      hasVariants: false 
-    },
-    {
-      id: "st8",
-      name: "Daily Grace Journal",
-      category: "Stationery",
-      basePrice: 249,
-      description: "A hardcover journal with thick 200 GSM pages designed to be ink-friendly and bleed-resistant. Perfect for recording thoughts, prayers, sermon notes, and personal goals in a beautifully structured format.",
-      image: "https://plus.unsplash.com/premium_photo-1679404108831-417d6561746b?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      hasVariants: false
-    },
-    {
-      id: "p4",
-      name: "The Beatitudes Poster",
-      category: "Stationery",
-      basePrice: 120,
-      description: "A matte-finish art print featuring the full text of the Beatitudes in an elegant, modern layout. Ideal for prayer spaces, offices, or living rooms. Available in multiple sizes to suit any décor.",
-      image: "https://www.shutterstock.com/image-vector/verse-about-light-christian-poster-600nw-2639787873.jpg",
-      hasVariants: true,
-      variants: [
-        { name: "Size", options: ["A5 ($12)", "A4 ($18)", "A3 ($25)"] }
-      ]
-    },
-
-    // --- POSTERS & PRINTS ---
-    { 
-      id: "po1", 
-      category: "Posters", 
-      name: "The Beatitudes Print", 
-      basePrice: 25, 
-      image: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=800&q=80", 
-      hasVariants: true, 
-      description: "A clean, minimalist print displaying the Beatitudes in a balanced, modern type layout. Printed on premium matte paper for a refined look suitable for framing.", 
-      variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] 
-    },
-    { 
-      id: "po2", 
-      category: "Posters", 
-      name: "Psalm 23 Minimalist", 
-      basePrice: 49, 
-      image: "https://i0.wp.com/www.flandersfamily.info/web/wp-content/uploads/2024/07/23rd-Psalm-Printable-IG.png?fit=1200%2C1200&ssl=1", 
-      hasVariants: true, 
-      description: "A serene and minimal print featuring the beloved Psalm 23. Designed with soft typography and spacious layout to evoke peace and reflection.", 
-      variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] 
-    },
-    { 
-      id: "po3", 
-      category: "Posters", 
-      name: "Creation Abstract", 
-      basePrice: 180, 
-      image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80", 
-      hasVariants: true, 
-      description: "An abstract art print inspired by the wonder of creation. Bold shapes and gentle tones come together to create a striking yet soothing visual centerpiece.", 
-      variants: [{ name: "Size", options: ["A5", "A4"] }] 
-    },
-    { 
-      id: "po4", 
-      category: "Posters", 
-      name: "Faith Hope Love", 
-      basePrice: 150, 
-      image: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=800&q=80", 
-      hasVariants: true, 
-      description: "A modern typographic poster featuring the timeless trio: faith, hope, and love. Printed on smooth matte paper to ensure longevity and vibrant detail.", 
-      variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] 
-    },
-  
-    // --- STICKERS & BADGES ---
-    { 
-      id: "sb1", 
-      category: "Stickers", 
-      name: "Vinyl Sticker Pack (x5)", 
-      basePrice: 100, 
-      image: "https://images.unsplash.com/photo-1572375992501-4b0892d50c69?auto=format&fit=crop&w=800&q=80", 
-      description: "A pack of five high-quality vinyl stickers featuring uplifting and aesthetic designs. Fully waterproof and durable, perfect for laptops, water bottles, tablets, and more.", 
-      hasVariants: false 
-    },
-    { 
-      id: "sb2", 
-      category: "Stickers", 
-      name: "Laptop Skin - Marble", 
-      basePrice: 150, 
-      image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80", 
-      description: "A smooth and stylish marble-pattern vinyl laptop skin designed to protect your device from scratches while giving it a clean, elegant appearance. Fits most 13–15 inch laptops.", 
-      hasVariants: false 
-    },
-    { 
-      id: "sb3", 
-      category: "Stickers", 
-      name: "Enamel Pin - Dove", 
-      basePrice: 80, 
-      image: "https://images.unsplash.com/photo-1632296727222-3829050d2870?auto=format&fit=crop&w=800&q=80", 
-      description: "A beautifully crafted enamel pin shaped like a dove—an enduring symbol of peace. Perfect for jackets, bags, hats, or gifts.", 
-      hasVariants: false 
-    },
-    { 
-      id: "sb4", 
-      category: "Stickers", 
-      name: "Button Badges Set", 
-      basePrice: 99, 
-      image: "https://images.unsplash.com/photo-1533230408703-090de62725bc?auto=format&fit=crop&w=800&q=80", 
-      description: "A set of colorful, lightweight button badges featuring inspiring designs. Great for backpacks, jackets, or sharing with friends.", 
-      hasVariants: false 
-    },
-    {
-      id: "sb5",
-      name: "Be Still - Laptop Skin",
-      category: "Tech",
-      basePrice: 150,
-      description: "A sleek vinyl laptop skin printed with the comforting message 'Be Still.' Resistant to scratches and bubbling, and easy to apply to most 13–15 inch laptops.",
-      image: "https://i.pinimg.com/736x/07/60/e8/0760e8bf5f0e34118617fa280b53f782.jpg",
-      hasVariants: false
-    },
-
-    // --- HOME (Mugs, Cushions) ---
-    { 
-      id: "hm1", 
-      category: "Home", 
-      name: "Morning Mercy Mug", 
-      basePrice: 449, 
-      image: "https://images.unsplash.com/photo-1617283433230-e0ef1af00cfc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
-      description: "A ceramic 12oz mug with a smooth finish, perfect for morning coffee or tea. Features an encouraging reminder of fresh mercies each day. Dishwasher and microwave safe.", 
-      hasVariants: false 
-    },
-    { 
-      id: "hm2", 
-      category: "Home", 
-      name: "Linen Cushion Cover", 
-      basePrice: 149, 
-      image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80", 
-      description: "A soft and breathable linen cushion cover embroidered with delicate detailing. Adds warmth and texture to any living space with a simple, elegant aesthetic.", 
-      hasVariants: false 
-    },
-    { 
-      id: "hm3", 
-      category: "Home", 
-      name: "Scented Soy Candle", 
-      basePrice: 199, 
-      image: "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&q=80", 
-      description: "A hand-poured soy candle scented with frankincense and myrrh, offering a calming and earthy aroma. Burns cleanly and evenly for hours of peaceful ambiance.", 
-      hasVariants: false 
-    },
-    { 
-      id: "hm4", 
-      category: "Gifts", 
-      name: "The Starter Bundle", 
-      basePrice: 849, 
-      image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80", 
-      description: "A thoughtfully curated gift bundle featuring a cozy hoodie, a high-quality journal, and a ceramic mug. Perfect for new believers, students, or anyone wanting to begin their faith-filled journey with meaningful essentials.", 
-      hasVariants: true, 
-      variants: [{ name: "Size", options: ["S", "M", "L"] }] 
-    },
-    {
-      id: "hm5",
-      name: "St. Francis Tote Bag",
-      category: "Accessories",
-      basePrice: 199,
-      description: "A durable canvas tote inspired by the peaceful spirit of St. Francis. Designed for everyday carry, offering ample space for books, groceries, or personal items with comfortable shoulder straps.",
-      image: "https://i.pinimg.com/736x/b4/e2/15/b4e2156269f6f132721667cd12bfed7c.jpg",
-      hasVariants: false
-    },
-  ];
+      // --- BOOKMARKS ---
+      { id: "bk1", category: "Bookmarks", name: "Let Your Light Shine", basePrice: 79, image: "https://placeholder.co/bk1.jpg", description: "Bright, uplifting typography reminding you to live boldly in faith. A daily encouragement tucked into every page.", hasVariants: false },
+      { id: "bk2", category: "Bookmarks", name: "Turn the Page, Chase the Dream", basePrice: 79, image: "https://placeholder.co/bk2.jpg", description: "A gentle nudge toward hope and perseverance. Perfect for readers who see books as journeys.", hasVariants: false },
+      { id: "bk3", category: "Bookmarks", name: "Jeremiah 29:11 Promise", basePrice: 79, image: "https://placeholder.co/bk3.jpg", description: "Scripture-based bookmark reminding you of God’s plans and faithfulness.", hasVariants: false },
+      { id: "bk4", category: "Bookmarks", name: "Faith – Hebrews 11:1", basePrice: 79, image: "https://placeholder.co/bk4.jpg", description: "Minimal scripture design centred on assurance and hope.", hasVariants: false },
+      { id: "bk5", category: "Bookmarks", name: "We Love Because He Loved Us", basePrice: 79, image: "https://placeholder.co/bk5.jpg", description: "A soft, reflective reminder of God’s first love.", hasVariants: false },
+      { id: "bk6", category: "Bookmarks", name: "Be Still and Know", basePrice: 79, image: "https://placeholder.co/bk6.jpg", description: "Psalm-inspired design encouraging stillness and trust.", hasVariants: false },
+      { id: "bk7", category: "Bookmarks", name: "God Is Love", basePrice: 79, image: "https://placeholder.co/bk7.jpg", description: "Simple declaration of God’s nature, perfect for daily reflection.", hasVariants: false },
+      { id: "bk8", category: "Bookmarks", name: "Restless Until They Rest in You", basePrice: 79, image: "https://placeholder.co/bk8.jpg", description: "Augustinian-inspired quote for thoughtful readers.", hasVariants: false },
+    
+      { id: "bk9", category: "Bookmarks", name: "New Creation – 2 Corinthians 5:17", basePrice: 79, image: "https://placeholder.co/bk9.jpg", description: "A fresh start captured in scripture and art.", hasVariants: false },
+      { id: "bk10", category: "Bookmarks", name: "For God So Loved the World", basePrice: 79, image: "https://placeholder.co/bk10.jpg", description: "Classic John 3:16 bookmark with warm tones.", hasVariants: false },
+      { id: "bk11", category: "Bookmarks", name: "The Lord Is With You", basePrice: 79, image: "https://placeholder.co/bk11.jpg", description: "Joshua 1:9 encouragement for courage and confidence.", hasVariants: false },
+      { id: "bk12", category: "Bookmarks", name: "As the Deer Longs", basePrice: 79, image: "https://placeholder.co/bk12.jpg", description: "Psalm-inspired imagery symbolising spiritual longing.", hasVariants: false },
+      { id: "bk13", category: "Bookmarks", name: "Hope in the Lord", basePrice: 79, image: "https://placeholder.co/bk13.jpg", description: "Renewal and strength captured in scripture.", hasVariants: false },
+      { id: "bk14", category: "Bookmarks", name: "Faith Can Move Mountains", basePrice: 79, image: "https://placeholder.co/bk14.jpg", description: "Bold declaration paired with landscape art.", hasVariants: false },
+      { id: "bk15", category: "Bookmarks", name: "Lost in the Pages", basePrice: 79, image: "https://placeholder.co/bk15.jpg", description: "A calm, book-lover-friendly design with faith undertones.", hasVariants: false },
+    
+      { id: "bk16", category: "Bookmarks", name: "Bloom Where You Are", basePrice: 79, image: "https://placeholder.co/bk16.jpg", description: "Encouraging growth and faithfulness wherever life places you.", hasVariants: false },
+      { id: "bk17", category: "Bookmarks", name: "Faith Hope Love – 1 Corinthians 13", basePrice: 79, image: "https://placeholder.co/bk17.jpg", description: "Elegant scripture bookmark highlighting love above all.", hasVariants: false },
+      { id: "bk18", category: "Bookmarks", name: "One Page at a Time", basePrice: 79, image: "https://placeholder.co/bk18.jpg", description: "Gentle reminder to grow steadily in faith and life.", hasVariants: false },
+      { id: "bk19", category: "Bookmarks", name: "Greater Love Has No One", basePrice: 79, image: "https://placeholder.co/bk19.jpg", description: "A powerful verse reflecting sacrifice and devotion.", hasVariants: false },
+    
+      { id: "bk20", category: "Bookmarks", name: "Dreams Blossom in Silence", basePrice: 79, image: "https://placeholder.co/bk20.jpg", description: "Soft abstract art encouraging patience and trust.", hasVariants: false },
+      { id: "bk21", category: "Bookmarks", name: "His Mercies Are New Every Morning", basePrice: 79, image: "https://placeholder.co/bk21.jpg", description: "Hope-filled bookmark inspired by Lamentations.", hasVariants: false },
+      { id: "bk22", category: "Bookmarks", name: "Let All That You Do Be Done in Love", basePrice: 79, image: "https://placeholder.co/bk22.jpg", description: "Scripture-based reminder for daily living.", hasVariants: false },
+      { id: "bk23", category: "Bookmarks", name: "Do Not Fear, I Am With You", basePrice: 79, image: "https://placeholder.co/bk23.jpg", description: "Isaiah-inspired encouragement bookmark.", hasVariants: false },
+    
+    // --- POSTERS (Diaries, Bookmarks) ---
+    const posters = [
+      {
+        id: "po1",
+        category: "Posters",
+        name: "Faith Is the Assurance – Hebrews 11:1",
+        basePrice: 199,
+        image: "https://placeholder.co/po1.jpg",
+        description: "Minimal typographic poster reflecting faith in the unseen and trust in God’s promises.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po2",
+        category: "Posters",
+        name: "Hope – Jeremiah 29:11",
+        basePrice: 199,
+        image: "https://placeholder.co/po2.jpg",
+        description: "Scripture poster reminding of God’s plans to prosper and give hope for the future.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po3",
+        category: "Posters",
+        name: "Love – John 3:16",
+        basePrice: 199,
+        image: "https://placeholder.co/po3.jpg",
+        description: "Soft pastel scripture poster centred on sacrificial and unconditional love.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po4",
+        category: "Posters",
+        name: "Fearfully and Wonderfully Made",
+        basePrice: 249,
+        image: "https://placeholder.co/po4.jpg",
+        description: "Psalm 139:14 inspired artwork celebrating identity, worth, and divine creation.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po5",
+        category: "Posters",
+        name: "Jesus With the Heroes",
+        basePrice: 299,
+        image: "https://placeholder.co/po5.jpg",
+        description: "Creative illustration portraying Jesus above all cultural and historical heroes.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po6",
+        category: "Posters",
+        name: "Hallelujah – Meaning & Origin",
+        basePrice: 249,
+        image: "https://placeholder.co/po6.jpg",
+        description: "Typography poster explaining the meaning and roots of the word Hallelujah.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po7",
+        category: "Posters",
+        name: "While We Were Still Sinners",
+        basePrice: 249,
+        image: "https://placeholder.co/po7.jpg",
+        description: "Bold visual reminder of Christ’s sacrifice and unconditional love.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po8",
+        category: "Posters",
+        name: "Forever Kinda Love – Adoration",
+        basePrice: 249,
+        image: "https://placeholder.co/po8.jpg",
+        description: "Eucharistic-inspired artwork reflecting Christ’s eternal presence in adoration.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po9",
+        category: "Posters",
+        name: "Jesus – Digital Art Portrait",
+        basePrice: 299,
+        image: "https://placeholder.co/po9.jpg",
+        description: "Modern digital illustration of Jesus with a calm and contemporary aesthetic.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po10",
+        category: "Posters",
+        name: "Jesus Hugging a Girl",
+        basePrice: 299,
+        image: "https://placeholder.co/po10.jpg",
+        description: "Tender illustration symbolising comfort, protection, and healing in Christ.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po11",
+        category: "Posters",
+        name: "Psalm 23 – The Lord Is My Shepherd",
+        basePrice: 249,
+        image: "https://placeholder.co/po11.jpg",
+        description: "Comforting scripture poster inspired by Psalm 23 and God’s guidance.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po12",
+        category: "Posters",
+        name: "Psalm 91 – He Who Dwells",
+        basePrice: 249,
+        image: "https://placeholder.co/po12.jpg",
+        description: "Full Psalm 91 displayed in an editorial-style layout symbolising refuge.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po13",
+        category: "Posters",
+        name: "Psalm 91:4 – Under His Wings",
+        basePrice: 249,
+        image: "https://placeholder.co/po13.jpg",
+        description: "Verse-focused poster highlighting protection under God’s wings.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po14",
+        category: "Posters",
+        name: "The Way, the Truth, and the Life",
+        basePrice: 199,
+        image: "https://placeholder.co/po14.jpg",
+        description: "John 14:6 inspired typography declaring Christ as the only way.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po15",
+        category: "Posters",
+        name: "The Good Shepherd – Classic",
+        basePrice: 299,
+        image: "https://placeholder.co/po15.jpg",
+        description: "Gentle illustration of Jesus holding the lamb, symbolising care and redemption.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po16",
+        category: "Posters",
+        name: "The Good Shepherd – Cute Style",
+        basePrice: 299,
+        image: "https://placeholder.co/po16.jpg",
+        description: "Soft, childlike illustration of Jesus as the Good Shepherd.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po17",
+        category: "Posters",
+        name: "Cross of Flowers",
+        basePrice: 249,
+        image: "https://placeholder.co/po17.jpg",
+        description: "Floral cross artwork symbolising life, beauty, and redemption.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po18",
+        category: "Posters",
+        name: "Cross – Watercolor",
+        basePrice: 249,
+        image: "https://placeholder.co/po18.jpg",
+        description: "Soft watercolor cross expressing sacrifice, grace, and reverence.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po19",
+        category: "Posters",
+        name: "Wanted – The 100th Sheep",
+        basePrice: 249,
+        image: "https://placeholder.co/po19.jpg",
+        description: "Creative illustration inspired by the parable of the lost sheep and God’s pursuit.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po20",
+        category: "Posters",
+        name: "Whatever It Takes",
+        basePrice: 249,
+        image: "https://placeholder.co/po20.jpg",
+        description: "Bold declaration of sacrifice and commitment rooted in the cross.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po21",
+        category: "Posters",
+        name: "You Are Loved",
+        basePrice: 199,
+        image: "https://placeholder.co/po21.jpg",
+        description: "Minimal affirmation poster declaring unconditional love and worth.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po22",
+        category: "Posters",
+        name: "I'd Rather Have Jesus",
+        basePrice: 199,
+        image: "https://placeholder.co/po22.jpg",
+        description: "Faith-forward declaration choosing Christ above all else.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po23",
+        category: "Posters",
+        name: "Blessed",
+        basePrice: 199,
+        image: "https://placeholder.co/po23.jpg",
+        description: "Simple, calming typography reminding of God’s blessings.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po24",
+        category: "Posters",
+        name: "Saved by Grace",
+        basePrice: 199,
+        image: "https://placeholder.co/po24.jpg",
+        description: "Modern typography celebrating salvation through grace alone.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po25",
+        category: "Posters",
+        name: "Holy, Holy, Holy",
+        basePrice: 199,
+        image: "https://placeholder.co/po25.jpg",
+        description: "Worship-inspired typography focused on reverence and praise.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po26",
+        category: "Posters",
+        name: "Chosen, Loved, Beautiful",
+        basePrice: 199,
+        image: "https://placeholder.co/po26.jpg",
+        description: "Affirmation-based typography celebrating identity in Christ.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po27",
+        category: "Posters",
+        name: "Daughter of the King – Light Skin",
+        basePrice: 199,
+        image: "https://placeholder.co/po27.jpg",
+        description: "Identity poster affirming belonging and worth in Christ.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+      {
+        id: "po28",
+        category: "Posters",
+        name: "Daughter of the King – Dark Skin",
+        basePrice: 199,
+        image: "https://placeholder.co/po28.jpg",
+        description: "Alternate illustration celebrating representation and identity.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po29",
+        category: "Posters",
+        name: "Ave Maria",
+        basePrice: 299,
+        image: "https://placeholder.co/po29.jpg",
+        description: "Gentle Marian illustration suitable for prayer corners and sacred spaces.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      },
+    
+      {
+        id: "po30",
+        category: "Posters",
+        name: "The Boss – Jesus (The Chosen)",
+        basePrice: 299,
+        image: "https://placeholder.co/po30.jpg",
+        description: "Bold poster portraying Jesus as authority and leader, inspired by The Chosen.",
+        hasVariants: true,
+        variants: [{ name: "Size", options: ["A5", "A4", "A3"] }]
+      }
+    ];
   
 // This simulates a Database Query
 export async function getProducts() {
