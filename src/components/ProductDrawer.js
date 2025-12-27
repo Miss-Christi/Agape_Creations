@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useStore } from '../store/useStore';
 import { X, Check, ShoppingBag } from 'lucide-react';
 
@@ -10,9 +10,13 @@ export default function ProductDrawer() {
   if (!activeProduct) return null;
 
   const handleAdd = () => {
+    // Add to cart with no specific variant data (treat as base product)
     addToCart(activeProduct);
     setAdded(true);
-    setTimeout(() => { setAdded(false); closeProductDrawer(); }, 1000);
+    setTimeout(() => { 
+      setAdded(false); 
+      closeProductDrawer(); 
+    }, 1000);
   };
 
   return (
