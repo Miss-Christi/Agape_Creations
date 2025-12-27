@@ -1,76 +1,63 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
-export const useStore = create((set, get) => ({
-  // --- Data & Cart ---
-  cart: [],
-  selectedCategory: "All", 
-  
-  // --- UI States ---
-  isCartOpen: false,
-  isMenuOpen: false,
-  activeProduct: null, 
-  
-  // --- NEW: Order Success Modal State ---
-  isOrderSuccessOpen: false, 
+export const useStore = create(
+  persist(
+    (set, get) => ({
+      // --- CATEGORY FILTER STATE ---
+      selectedCategory: 'All',
+      setSelectedCategory: (category) => set({ selectedCategory: category }),
 
-  // --- Actions ---
-  setCategory: (cat) => set({ selectedCategory: cat }),
-  
-  toggleCart: () => set((state) => ({ isCartOpen: !state.isCartOpen })),
-  toggleMenu: () => set((state) => ({ isMenuOpen: !state.isMenuOpen })),
-  
-  openProductDrawer: (product) => set({ activeProduct: product }),
-  closeProductDrawer: () => set({ activeProduct: null }),
+      // --- PRODUCT DRAWER STATE ---
+      activeProduct: null,
+      openProductDrawer: (product) => set({ activeProduct: product }),
+      closeProductDrawer: () => set({ activeProduct: null }),
 
-  // --- NEW: Checkout Actions (Fixes the error) ---
-  openOrderSuccess: () => set({ isOrderSuccessOpen: true, cart: [] }), 
-  closeOrderSuccess: () => set({ isOrderSuccessOpen: false }),
+      // --- CART STATE ---
+      cart: [],
+      isCartOpen: false,
+      toggleCart: () => set((state) => ({ isCartOpen: !state.isCartOpen })),
 
-  // --- Cart Logic ---
-  addToCart: (product, variantSelection = null) => set((state) => {
-    // Generate unique ID based on variants
-    const variantKey = variantSelection ? `-${Object.values(variantSelection).join('-')}` : '';
-    const uniqueItemId = `${product.id}${variantKey}`;
-    
-    // Price Adjustment Logic
-    let finalPrice = product.basePrice;
-    if (variantSelection?.Size?.includes("A4") || variantSelection?.Size === "L") finalPrice += 5;
-    if (variantSelection?.Size?.includes("A3") || variantSelection?.Size === "XL") finalPrice += 10;
+      addToCart: (product) => set((state) => {
+        // Simple add to cart logic (No variants)
+        const existingItem = state.cart.find((item) => item.id === product.id);
 
-    const existing = state.cart.find((item) => item.uniqueItemId === uniqueItemId);
+        if (existingItem) {
+          return {
+            cart: state.cart.map((item) =>
+              item.id === product.id
+                ? { ...item, quantity: item.quantity + 1 }
+                : item
+            ),
+            isCartOpen: true,
+          };
+        }
 
-    if (existing) {
-      return {
-        cart: state.cart.map((item) =>
-          item.uniqueItemId === uniqueItemId 
-            ? { ...item, quantity: item.quantity + 1 } 
-            : item
-        ),
-        isCartOpen: true 
-      };
+        return {
+          cart: [...state.cart, { ...product, quantity: 1 }],
+          isCartOpen: true,
+        };
+      }),
+
+      removeFromCart: (productId) => set((state) => ({
+        cart: state.cart.filter((item) => item.id !== productId),
+      })),
+
+      // Helper function for totals
+      cartTotal: () => {
+        const { cart } = get();
+        return cart.reduce((total, item) => total + (item.basePrice * item.quantity), 0);
+      },
+    }),
+    {
+      name: 'agape-storage', 
+      skipHydration: true,
+      // CRITICAL FIX: Only persist the cart and category. 
+      // Do NOT persist activeProduct (this prevents crashes if data changes).
+      partialize: (state) => ({ 
+        cart: state.cart, 
+        selectedCategory: state.selectedCategory 
+      }),
     }
-
-    return { 
-      cart: [...state.cart, { 
-        ...product, 
-        uniqueItemId, 
-        selectedVariant: variantSelection, 
-        price: finalPrice, 
-        quantity: 1 
-      }], 
-      isCartOpen: true 
-    };
-  }),
-
-  removeFromCart: (uniqueItemId) => set((state) => ({
-    cart: state.cart.filter((item) => item.uniqueItemId !== uniqueItemId)
-  })),
-
-  updateQuantity: (uniqueItemId, qty) => set((state) => ({
-    cart: state.cart.map((item) => 
-      item.uniqueItemId === uniqueItemId ? { ...item, quantity: Math.max(1, qty) } : item
-    )
-  })),
-
-  cartTotal: () => get().cart.reduce((total, item) => total + item.price * item.quantity, 0),
-}));
+  )
+);
