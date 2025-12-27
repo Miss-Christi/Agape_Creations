@@ -13,6 +13,11 @@ import HeroCarousel from "../components/HeroCarousel";
 import CategoryBar from "../components/CategoryBar";
 
 export default function Home() {
+
+  if (!PRODUCTS || PRODUCTS.length === 0) {
+    return <Loading />;
+  }
+  
   const { selectedCategory } = useStore();
   const [PRODUCTS, setProducts] = useState([]);
 
@@ -105,7 +110,7 @@ export default function Home() {
         
         {/* Updated Grid: sm:grid-cols-2 for tablet, md:grid-cols-3 for laptops, lg:grid-cols-4 for desktops */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-forwards">
-          {filteredProducts.map((PRODUCTS) => (
+          {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
@@ -122,7 +127,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* --- CHANGE 3: Update slice to show Posters/Skins instead of just Bookmarks --- */}
                 {/* Using indices 23-26 shows Posters from your new list */}
-                {PRODUCTS.length > 0 ? PRODUCTS.slice(23, 26).map(product => (
+                {PRODUCTS.length > 0 ? PRODUCTS.slice(23, 26).map((product) => (
                     <ProductCard key={`bs-${product.id}`} product={product} />
                 )) : (
                     // Fallback loading skeletons if needed, or just empty

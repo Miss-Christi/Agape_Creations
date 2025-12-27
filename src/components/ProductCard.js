@@ -44,7 +44,9 @@ export default function ProductCard({ product }) {
           {/* 4. Pricing Logic */}
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-lg text-[#2E2433]">₹ {product.basePrice}</span>
+              <span className="font-bold text-lg text-[#2E2433]">₹ {product.basePrice.min && product.basePrice.max
+  ? `$${product.basePrice.min} - $${product.basePrice.max}`
+  : `$${product.basePrice}`}</span>
               <span className="text-xs text-gray-400 line-through decoration-red-400">${fakeOriginalPrice}</span>
             </div>
             <span className="text-[10px] font-bold text-green-600">(₹ {discount} OFF)</span>
