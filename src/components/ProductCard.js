@@ -49,7 +49,7 @@ export default function ProductCard({ product }) {
           {/* 4. Pricing Logic */}
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-lg text-[#2E2433]">Rs${product.basePrice}</span>
+              <span className="font-bold text-lg text-[#2E2433]">Rs{product.basePrice}</span>
               {product.category !== "Stickers" && (
               <span className="text-xs text-gray-400 line-through decoration-red-400">
                 ₹{fakeOriginalPrice}
