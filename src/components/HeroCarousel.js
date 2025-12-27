@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 
 const IMAGES = [
-  "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop", // Clothing/Lifestyle
+  "https://thumbs.dreamstime.com/b/embrace-essence-christian-faith-purple-online-web-graphic-background-perfect-church-websites-biblical-322439875.jpg", // Clothing/Lifestyle
   "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2073&auto=format&fit=crop", // Journaling/Writing
-  "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2032&auto=format&fit=crop"  // Friendship/Together
+  "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2032&auto=format&fit=crop",  // Friendship/Together
+  "https://media.istockphoto.com/id/817147678/photo/heart-shape-paper-book-on-the-beach.jpg?s=612x612&w=0&k=20&c=CN_FxOrS7-ix-QgwHoAHqDrHHqrsZExKpEqy0flwIXE="
 ];
 
 export default function HeroCarousel() {

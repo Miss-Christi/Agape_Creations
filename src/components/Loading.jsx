@@ -28,8 +28,8 @@ export default function Loading() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);      // Start fade-out
-      setTimeout(() => setIsVisible(false), 300); // Remove after animation
-    }, 1500);
+      setTimeout(() => setIsVisible(false), 250); // Remove after animation
+    }, 900);
 
     return () => clearTimeout(timer);
   }, []);

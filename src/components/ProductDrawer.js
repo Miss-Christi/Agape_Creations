@@ -43,7 +43,7 @@ export default function ProductDrawer() {
           </div>
 
           <h2 className="text-3xl font-serif text-[#2E2433] mb-2">{activeProduct.name}</h2>
-          <p className="text-2xl font-bold text-[#8C6A9E] mb-4">${activeProduct.basePrice}</p>
+          <p className="text-2xl font-bold text-[#8C6A9E] mb-4">Rs{activeProduct.basePrice}</p>
           
           <p className="text-[#5D4B66] leading-relaxed mb-8 text-base font-medium">
             {activeProduct.description || "Designed with intention. A beautiful addition to your collection."}

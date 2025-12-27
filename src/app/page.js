@@ -156,14 +156,14 @@ export default function Home() {
             <div className="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-700/50">
               <div className="text-4xl text-indigo-400 font-serif leading-none mb-4">"</div>
               <p className="text-lg text-purple-900 italic mb-6">
-                The quality of the hoodie is amazing! It's so soft and the message starts so many conversations at church.
+              I got the ‘Trust in the Lord’ diary and one of the posters for my room. Writing in it's become a quiet moment with God in the morning when I get up.             
               </p>
               <div className="flex items-center">
                 <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-lg shadow-lg">
-                  S
+                  J
                 </div>
                 <div className="ml-3">
-                  <p className="font-semibold text-purple-900">Sarah J.</p>
+                  <p className="font-semibold text-purple-900">Jose George.</p>
                   <p className="text-purple-900 text-sm">Verified Buyer</p>
                 </div>
               </div>
@@ -173,14 +173,14 @@ export default function Home() {
             <div className="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-700/50">
               <div className="text-4xl text-indigo-400 font-serif leading-none mb-4">"</div>
               <p className="text-lg text-purple-900 italic mb-6">
-                Fast delivery and the packaging was beautiful. The daily grace journal has become an essential part of my morning routine.
+              I put up one of the posters in my study corner, and it's like a quiet motivation and reminder for me to pray
               </p>
               <div className="flex items-center">
                 <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-lg shadow-lg">
                   M
                 </div>
                 <div className="ml-3">
-                  <p className="font-semibold text-purple-900">Michael R.</p>
+                  <p className="font-semibold text-purple-900">Michael D'Souza.</p>
                   <p className="text-purple-900 text-sm">Verified Buyer</p>
                 </div>
               </div>
@@ -190,15 +190,15 @@ export default function Home() {
             <div className="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-700/50">
               <div className="text-4xl text-indigo-400 font-serif leading-none mb-4">"</div>
               <p className="text-lg text-purple-900 italic mb-6">
-                I bought the tote bag for my sister's birthday and she absolutely loves it. The print quality is fantastic. Highly recommend!
+              I love these badges! I gave a couple to my friends, and have one on my college bag. Whenever I see it, it kinda just makes me smile and reminds me that God is always with me.
               </p>
               <div className="flex items-center">
                 <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-lg shadow-lg">
-                  P
+                  M
                 </div>
                 <div className="ml-3">
-                  <p className="font-semibold text-purple-900">Priya K.</p>
-                  <p className="text-purple-900 text-sm">Gift Shopper</p>
+                  <p className="font-semibold text-purple-900">Mary Elizabeth.</p>
+                  <p className="text-purple-900 text-sm">Verified Buyer</p>
                 </div>
               </div>
             </div>

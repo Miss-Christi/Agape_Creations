@@ -31,7 +31,7 @@ export default function CartDrawer() {
                   <div>
                     <div className="flex justify-between items-start mb-1">
                       <h3 className="font-bold text-sm text-[#2E2433] leading-tight">{item.name}</h3>
-                      <p className="font-bold text-[#2E2433]">${item.price * item.quantity}</p>
+                      <p className="font-bold text-[#2E2433]">Rs{item.price * item.quantity}</p>
                     </div>
                     {item.selectedVariant && Object.entries(item.selectedVariant).map(([key, val]) => (
                       <p key={key} className="text-xs text-[#5D4B66] font-medium">{key}: {val}</p>
