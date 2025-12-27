@@ -128,7 +128,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* --- CHANGE 3: Update slice to show Posters/Skins instead of just Bookmarks --- */}
                 {/* Using indices 23-26 shows Posters from your new list */}
-                {PRODUCTS.length > 0 ? PRODUCTS.slice(106,109).map((product) => (
+                {PRODUCTS.length > 0 ? PRODUCTS.slice(109,115).map((product) => (
                     <ProductCard key={`bs-${product.id}`} product={product} />
                 )) : (
                     // Fallback loading skeletons if needed, or just empty
