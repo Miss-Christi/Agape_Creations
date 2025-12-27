@@ -64,9 +64,19 @@ export default function Home() {
             </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.slice(0, 4).map((product) => (
+        {[
+          products.find(p => p.id === "ls1"), // replace with the IDs of the items you want
+          products.find(p => p.id === "po8"),
+          products.find(p => p.id === "di6"),
+          products.find(p => p.id === "po31")
+        ].map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+
+          {/*Dynamic selection*/}
+          {/*{products.slice(0, 4).map((product) => (
             <ProductCard key={product.id} product={product} />
-          ))}
+          ))}*/}
         </div>
       </section>
 

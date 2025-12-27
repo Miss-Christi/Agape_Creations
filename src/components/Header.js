@@ -18,7 +18,7 @@ export default function Header() {
 
           {/* LEFT: Logo */}
           <div className="flex items-center gap-4 cursor-pointer" onClick={() => setCategory("All")}>
-            <img src="/logo.png" alt="Agape Logo" className="h-10 w-auto" />
+            <img src="/Agape_Creations_Logo.png" alt="Agape Logo" className="h-10 w-auto" />
           </div>
 
           {/* CENTER: AGAPE text */}
@@ -56,7 +56,7 @@ export default function Header() {
           <button onClick={toggleMenu}><X /></button>
         </div>
         <nav className="text-gray p-6 space-y-2">
-          {["All Products", "Apparel", "Stationery", "Home", "Gifts"].map((item) => (
+          {["All", "Posters", "Stickers", "Diaries", "Laptop Skins", "Badges"].map((item) => (
             <button key={item} onClick={() => handleLinkClick(item)} className="w-full flex justify-between py-4 text-purple-900 border-b border-stone-900 text-left hover:text-[#ffffff] hover:pl-2 transition-all">
               {item} <ChevronRight size={16} className="text-gray-900"/>
             </button>
