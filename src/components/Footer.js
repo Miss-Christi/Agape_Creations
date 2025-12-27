@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="col-span-1 md:col-span-2 pr-8">
           <h2 className="text-3xl font-serif mb-4">AGAPE (ä-gá-pā)</h2>
           <p className="text-gray-400 leading-relaxed max-w-md mb-6">
-            "The highest form of love." We create contemporary goods inspired by truths that have a direct connection with our faith.
+            "The highest form of love, rooted in faith and lived with purpose. Rooted in His ultimate selfless sacrifice, it calls us to love beyond ourselves, wholly and sincerely, reflected in all we create.
           </p>
           <div className="flex gap-4 text-gray-400">
             <a

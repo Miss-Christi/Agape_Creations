@@ -93,8 +93,7 @@ export default function Home() {
             <h3 className="text-5xl font-serif">AGAPE (ä-gá-pā)</h3>
             <p className="text-xl text-purple-200 italic font-serif">"The highest form of love."</p>
             <p className="text-gray-300 leading-loose">
-                AGAPE is an ancient Greek word used in the Bible’s New Testament. We offer contemporary casual wear and goods inspired by truths that have a direct connection with our faith.
-            </p>
+            Born from an ancient Greek word in the New Testament, AGAPE represents love in its purest form. Every design we create is inspired by faith-filled truths that remain timeless and intentional in a constantly changing world —rooted in purpose and shaped by belief.            </p>
         </div>
       </section>
 
