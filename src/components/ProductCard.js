@@ -15,20 +15,18 @@ export default function ProductCard({ product }) {
   const discount = fakeOriginalPrice - product.basePrice;
 
   return (
-    <div 
-      onClick={() => openProductDrawer(product)} 
-      className="group cursor-pointer flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-50"
-    >
+    <div onClick={() => openProductDrawer(product)} 
+      className="group cursor-pointer flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-50">
       {/* 1. Reduced Image Height (Aspect Ratio changed from 4/5 to video/landscape-ish) */}
       <div className="aspect-[4/3] bg-purple-50 overflow-hidden relative">
         <img 
-          src={product.image} 
+          src={product.image || "/placeholder.png"} 
           alt={product.name} 
           className="object-contain w-full h-full group-hover:scale-105 transition duration-700 ease-out" 
         />
       </div>
 
-      {/* 2. Increased Text Area */}
+      {/* 2. Text Area */}
       <div className="p-5 flex flex-col flex-grow relative">
         <div className="mb-2">
            <p className="text-[10px] font-bold text-[#8C6A9E] uppercase tracking-widest mb-1">{product.category}</p>
@@ -44,23 +42,20 @@ export default function ProductCard({ product }) {
           {/* 4. Pricing Logic */}
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-lg text-[#2E2433]">₹ {product.basePrice.min && product.basePrice.max
-                  ? `Rs${product.basePrice.min} - Rs${product.basePrice.max}`
-                  : `Rs${product.basePrice}`}</span>
-              <span className="text-xs text-gray-400 line-through decoration-red-400">${fakeOriginalPrice}</span>
-            </div>
+              <span className="font-bold text-lg text-[#2E2433]">Rs{product.basePrice}</span>
+              <span className="text-xs text-gray-400 line-through decoration-red-400">Rs{fakeOriginalPrice}</span>
             <span className="text-[10px] font-bold text-green-600">(₹ {discount} OFF)</span>
           </div>
 
           {/* 5. Button moved to bottom right, Lilac Default, Dark Purple Hover */}
           <button 
             onClick={handleQuickAdd}
-            className="bg-[#BFA2DB] p-3 rounded-full shadow-md text-white hover:bg-[#8C6A9E] transition active:scale-90"
-          >
+            className="bg-[#BFA2DB] p-3 rounded-full shadow-md text-white hover:bg-[#8C6A9E] transition active:scale-90">
             <Plus size={18} />
           </button>
         </div>
       </div>
     </div>
+  </div>
   );
 }
