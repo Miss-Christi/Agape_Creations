@@ -45,8 +45,8 @@ export default function ProductCard({ product }) {
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <span className="font-bold text-lg text-[#2E2433]">₹ {product.basePrice.min && product.basePrice.max
-  ? `$${product.basePrice.min} - $${product.basePrice.max}`
-  : `$${product.basePrice}`}</span>
+                  ? `Rs${product.basePrice.min} - Rs${product.basePrice.max}`
+                  : `Rs${product.basePrice}`}</span>
               <span className="text-xs text-gray-400 line-through decoration-red-400">${fakeOriginalPrice}</span>
             </div>
             <span className="text-[10px] font-bold text-green-600">(₹ {discount} OFF)</span>

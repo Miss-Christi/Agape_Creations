@@ -14,16 +14,17 @@ import CategoryBar from "../components/CategoryBar";
 
 export default function Home() {
 
-  if (!PRODUCTS || PRODUCTS.length === 0) {
-    return <Loading />;
-  }
-  
   const { selectedCategory } = useStore();
   const [PRODUCTS, setProducts] = useState([]);
 
   useEffect(() => {
     getProducts().then(setProducts);
   }, []);
+
+  if (!PRODUCTS || PRODUCTS.length === 0) {
+    return <Loading />;
+  }
+  
 
   // --- CHANGE 1: Calculate Categories Dynamically ---
   // This ensures "Bookmarks", "Posters", etc. appear automatically
