@@ -168,7 +168,7 @@ export default function Checkout() {
               <div key={item.uniqueItemId} className="flex justify-between text-sm items-center border-b border-gray-50 pb-4 last:border-0">
                 <div className="flex gap-3 items-center">
                    <div className="w-12 h-12 bg-purple-50 rounded overflow-hidden flex-shrink-0">
-                      <img src={item.image} className="w-full h-full object-cover" alt={item.name} />
+                      <img src={item.image} className="w-full h-full object-contain" alt={item.name} />
                    </div>
                    <div>
                       <div className="font-bold text-[#2E2433]">{item.name}</div> 

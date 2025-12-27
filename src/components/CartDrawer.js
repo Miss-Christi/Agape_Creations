@@ -25,7 +25,7 @@ export default function CartDrawer() {
             {cart.map((item) => (
               <div key={item.uniqueItemId} className="flex gap-4 bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-purple-100 shadow-sm">
                 <div className="w-20 h-24 bg-purple-50 rounded-lg overflow-hidden flex-shrink-0">
-                  <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                  <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
                 </div>
                 <div className="flex-1 flex flex-col justify-between">
                   <div>
