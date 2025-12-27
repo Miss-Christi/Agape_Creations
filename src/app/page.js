@@ -14,7 +14,7 @@ import CategoryBar from "../components/CategoryBar";
 
 export default function Home() {
   const { selectedCategory } = useStore();
-  const [products, setProducts] = useState([]);
+  const [PRODUCTS, setProducts] = useState([]);
 
   useEffect(() => {
     getProducts().then(setProducts);
@@ -22,12 +22,12 @@ export default function Home() {
 
   // --- CHANGE 1: Calculate Categories Dynamically ---
   // This ensures "Bookmarks", "Posters", etc. appear automatically
-  const categories = ["All", ...new Set(products.map((p) => p.category))];
+  const categories = ["All", ...new Set(PRODUCTS.map((p) => p.category))];
 
   // Filter Logic controls ONLY the main grid
   const filteredProducts = selectedCategory === "All" 
-    ? products 
-    : products.filter(p => p.category === selectedCategory);
+    ? PRODUCTS 
+    : PRODUCTS.filter(p => p.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-[#d3b3f0] flex flex-col font-sans">
@@ -65,16 +65,16 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          products.find(p => p.id === "ls1"), // replace with the IDs of the items you want
-          products.find(p => p.id === "po8"),
-          products.find(p => p.id === "di6"),
-          products.find(p => p.id === "po31")
+          PRODUCTS.find(p => p.id === "ls1"), // replace with the IDs of the items you want
+          PRODUCTS.find(p => p.id === "po8"),
+          PRODUCTS.find(p => p.id === "di6"),
+          PRODUCTS.find(p => p.id === "po31")
         ].map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
 
           {/*Dynamic selection*/}
-          {/*{products.slice(0, 4).map((product) => (
+          {/*{PRODUCTS.slice(0, 4).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}*/}
         </div>
@@ -124,7 +124,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* --- CHANGE 3: Update slice to show Posters/Skins instead of just Bookmarks --- */}
                 {/* Using indices 23-26 shows Posters from your new list */}
-                {products.length > 0 ? products.slice(23, 26).map((product) => (
+                {PRODUCTS.length > 0 ? PRODUCTS.slice(23, 26).map((product) => (
                     <ProductCard key={`bs-${product.id}`} product={product} />
                 )) : (
                     // Fallback loading skeletons if needed, or just empty
