@@ -93,7 +93,7 @@ Hi! I would like to confirm this order. Please share payment details.`;
 
     // 3️⃣ Redirect to WhatsApp
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappUrl = `https://wa.me/91XXXXXXXXXX?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/919145170913?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
 
     setLoading(false);
