@@ -4,6 +4,7 @@ import { useStore } from '@/store/useStore';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { MessageCircle, ArrowLeft } from 'lucide-react';
+import { PRODUCTS } from '@/lib/data';
 
 export default function Checkout() {
   const { cart, cartTotal } = useStore();
@@ -51,7 +52,7 @@ export default function Checkout() {
       phone: formData.phone,
       email: formData.email,
       address: `${formData.address}, ${formData.city} - ${formData.zip}`,
-      products: cart.map(item => {
+      PRODUCTS: cart.map(item => {
         const variantInfo = item.selectedVariant ? ` (${Object.values(item.selectedVariant).join(", ")})` : "";
         return `${item.name}${variantInfo} x${item.quantity}`;
       }).join(", "),
