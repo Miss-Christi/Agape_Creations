@@ -18,7 +18,7 @@ export default function Header() {
 
           {/* LEFT: Logo */}
           <div className="flex items-center gap-4 cursor-pointer" onClick={() => setCategory("All")}>
-            <img src="/Agape_Creations_Logo.png" alt="Agape Logo" className="h-10 w-auto" />
+            <img src="/Agape_Creations_Logo.png" alt="Agape Logo" className="h-12 w-auto" />
           </div>
 
           {/* CENTER: AGAPE text */}
@@ -28,7 +28,7 @@ export default function Header() {
 
           {/* RIGHT: Hamburger + Cart */}
           <div className="flex gap-6 items-center">
-            <button onClick={toggleMenu} className="hover:text-[#9f4a3e]"><Menu /></button>
+          {/*<button onClick={toggleMenu} className="hover:text-[#9f4a3e]"><Menu /></button>*/}
 
             <button onClick={toggleCart} className="relative group">
               <ShoppingBag className="group-hover:text-[#9f4a3e] transition" />
@@ -43,13 +43,13 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Overlay */}
+      {/* Overlay 
       <div 
         className={`fixed inset-0 bg-black/60 z-[60] transition-opacity ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} 
         onClick={toggleMenu} 
       />
 
-      {/* Menu Drawer */}
+      {/* Menu Drawer *
       <div className={`fixed top-0 right-0 h-full w-[300px] bg-[#faf9f6] z-[70] shadow-2xl transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-6 flex justify-between items-center border-b border-stone-200">
           <span className="font-serif font-bold text-xl">Menu</span>
@@ -62,7 +62,7 @@ export default function Header() {
             </button>
           ))}
         </nav>
-      </div>
+      </div>*/}
     </>
   );
 }

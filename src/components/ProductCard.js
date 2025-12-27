@@ -11,8 +11,13 @@ export default function ProductCard({ product }) {
   };
 
   // Mocking "Original Price" for the discount visual
-  const fakeOriginalPrice = Math.floor(product.basePrice * 1.4);
-  const discount = fakeOriginalPrice - product.basePrice;
+  let fakeOriginalPrice, discount;
+
+  if (product.category !== "Stickers") {
+    fakeOriginalPrice = Math.floor(product.basePrice * 1.4);
+    discount = fakeOriginalPrice - product.basePrice;
+  }
+
 
   return (
     <div 
@@ -44,13 +49,19 @@ export default function ProductCard({ product }) {
           {/* 4. Pricing Logic */}
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
-              <span className="font-bold text-lg text-[#2E2433]">₹ {product.basePrice.min && product.basePrice.max
-                  ? `Rs${product.basePrice.min} - Rs${product.basePrice.max}`
-                  : `Rs${product.basePrice}`}</span>
-              <span className="text-xs text-gray-400 line-through decoration-red-400">${fakeOriginalPrice}</span>
-            </div>
-            <span className="text-[10px] font-bold text-green-600">(₹ {discount} OFF)</span>
+              <span className="font-bold text-lg text-[#2E2433]">Rs${product.basePrice}</span>
+              {product.category !== "Stickers" && (
+              <span className="text-xs text-gray-400 line-through decoration-red-400">
+                ₹{fakeOriginalPrice}
+              </span>
+            )}
           </div>
+
+          {product.category !== "Stickers" && (
+            <span className="text-[10px] font-bold text-green-600">(₹ {discount} OFF)</span>
+          )}
+          </div>
+        </div>
 
           {/* 5. Button moved to bottom right, Lilac Default, Dark Purple Hover */}
           <button 
