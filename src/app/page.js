@@ -64,14 +64,12 @@ export default function Home() {
             </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {[
-          PRODUCTS.find(p => p.id === "ls1"), // replace with the IDs of the items you want
-          PRODUCTS.find(p => p.id === "po8"),
-          PRODUCTS.find(p => p.id === "di6"),
-          PRODUCTS.find(p => p.id === "po31")
-        ].map((PRODUCTS) => (
-          <ProductCard key={PRODUCTS.id} PRODUCTS={PRODUCTS} />
-        ))}
+          {["ls1", "po8", "di6", "po31"]
+            .map(id => PRODUCTS.find(p => p.id === id))
+            .filter(Boolean) // ✅ remove any undefined
+            .map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
 
           {/*Dynamic selection*/}
           {/*{PRODUCTS.slice(0, 4).map((PRODUCTS) => (
@@ -108,7 +106,7 @@ export default function Home() {
         {/* Updated Grid: sm:grid-cols-2 for tablet, md:grid-cols-3 for laptops, lg:grid-cols-4 for desktops */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-forwards">
           {filteredProducts.map((PRODUCTS) => (
-            <ProductCard key={PRODUCTS.id} PRODUCTS={PRODUCTS} />
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
         
@@ -124,8 +122,8 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* --- CHANGE 3: Update slice to show Posters/Skins instead of just Bookmarks --- */}
                 {/* Using indices 23-26 shows Posters from your new list */}
-                {PRODUCTS.length > 0 ? PRODUCTS.slice(23, 26).map((PRODUCTS) => (
-                    <ProductCard key={`bs-${PRODUCTS.id}`} PRODUCTS={PRODUCTS} />
+                {PRODUCTS.length > 0 ? PRODUCTS.slice(23, 26).map(product => (
+                    <ProductCard key={`bs-${product.id}`} product={product} />
                 )) : (
                     // Fallback loading skeletons if needed, or just empty
                     <div className="col-span-3 text-center text-gray-400">Loading Bestsellers...</div>
