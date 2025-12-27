@@ -1,17 +1,17 @@
 "use client";
 import { useStore } from '../store/useStore';
-import { Shirt, BookOpen, Coffee, Gift, Home, Sparkles } from 'lucide-react';
+import { Scroll, Sticker, BookOpen, Laptop, CircleStar, Sparkles } from 'lucide-react';
 
 export default function CategoryBar() {
   const { selectedCategory, setCategory } = useStore();
 
   const CATEGORIES = [
     { name: "All", icon: <Sparkles size={18} /> },
-    { name: "Apparel", icon: <Shirt size={18} /> },
-    { name: "Stationery", icon: <BookOpen size={18} /> },
-    { name: "Home Decor", icon: <Home size={18} /> },
-    { name: "Gifts", icon: <Gift size={18} /> },
-    { name: "Posters", icon: <Coffee size={18} /> },
+    { name: "Posters", icon: <Scroll size={18} /> },
+    { name: "Stickers", icon: <Sticker size={18} /> },
+    { name: "Diaries", icon: <BookOpen size={18} /> },
+    { name: "Laptop Skins", icon: <Laptop size={18} /> },
+    { name: "Badges", icon: <CircleStar size={18} /> },
   ];
 
   return (

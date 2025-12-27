@@ -1,4 +1,10 @@
 /* Mini Database */
+// Generate image paths
+const getPath = (category, id) => {
+  // Placeholder strategy:
+    return `/public/${category}/${id}.jpg`;
+};
+
 export const PRODUCTS = [
     // FILE 1: LAPTOP SKINS (Pages 1-11)
     { id: "ls1", category: "Laptop Skins", name: "Catholic Collage", basePrice: 299, image: getPath("laptop_skins", 1), description: "Minimalist Jesus typography design.", hasVariants: false },
@@ -192,9 +198,9 @@ export const PRODUCTS = [
     { id: "di6", category: "Diaries", name: "Daughter of the King – Light Skin Diary", basePrice: 249, image: getPath("diaries", 6), description: "An identity-affirming diary reminding you of your royal worth and calling in Christ.", hasVariants: false },
     { id: "di7", category: "Diaries", name: "Daughter of the King – Dark Skin Diary", basePrice: 249, image: getPath("diaries", 7), description: "A representation-focused design celebrating dignity, identity, and faith.", hasVariants: false },
     { id: "di8", category: "Diaries", name: "Psalm 91 – Under His Wings Diary", basePrice: 249,image: getPath("diaries", 8), description: "Psalm 91:4 inspired diary highlighting refuge, protection, and God’s covering wings.", hasVariants: false },
-    { id: "di9", category: "Diaries", name: "Yeshua – Lion of Judah", basePrice: 249, image: getPath("diaries", 9)", description: "Powerful artwork of Yeshua as the Lion of Judah, symbolising authority, victory, and kingship.", hasVariants: false },
+    { id: "di9", category: "Diaries", name: "Yeshua – Lion of Judah", basePrice: 249, image: getPath("diaries", 9), description: "Powerful artwork of Yeshua as the Lion of Judah, symbolising authority, victory, and kingship.", hasVariants: false },
     { id: "di10", category: "Diaries", name: "With God All Things Are Possible", basePrice: 249, image: getPath("diaries", 10), description: "Faith-forward typography diary inspired by Matthew 19:26, created to fuel hope and perseverance.", hasVariants: false },
-    { id: "di11", category: "Diaries", name: "Just a Girl Who Loves Jesus", basePrice: 249, iimage: getPath("diaries", 11), description: "Soft, modern diary design celebrating simple, everyday love for Jesus.", hasVariants: false },
+    { id: "di11", category: "Diaries", name: "Just a Girl Who Loves Jesus", basePrice: 249, image: getPath("diaries", 11), description: "Soft, modern diary design celebrating simple, everyday love for Jesus.", hasVariants: false },
     { id: "di12", category: "Diaries", name: "Saved by Grace Diary", basePrice: 249, image: getPath("diaries", 12), description: "Minimal typography diary celebrating salvation through grace alone.", hasVariants: false },
     { id: "di13", category: "Diaries", name: "Let All That You Do Be Done in Love", basePrice: 249, image: getPath("diaries", 13), description: "Scripture-inspired diary encouraging love as the foundation of all actions and decisions.", hasVariants: false },
   
