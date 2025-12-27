@@ -18,7 +18,6 @@ export default function ProductCard({ product }) {
     discount = fakeOriginalPrice - product.basePrice;
   }
 
-
   return (
     <div 
       onClick={() => openProductDrawer(product)} 
@@ -51,14 +50,14 @@ export default function ProductCard({ product }) {
             <div className="flex items-center gap-2">
               <span className="font-bold text-lg text-[#2E2433]">Rs{product.basePrice}</span>
               {product.category !== "Stickers" && (
-              <span className="text-xs text-gray-400 line-through decoration-red-400">
-                ₹{fakeOriginalPrice}
-              </span>
-            )}
-          </div>
+                <span className="text-xs text-gray-400 line-through decoration-red-400">
+                  Rs{fakeOriginalPrice}
+                </span>
+              )}
+            </div>
 
           {product.category !== "Stickers" && (
-            <span className="text-[10px] font-bold text-green-600">(₹ {discount} OFF)</span>
+            <span className="text-[10px] font-bold text-green-600">(Rs {discount} OFF)</span>
           )}
           </div>
         </div>
