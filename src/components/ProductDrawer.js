@@ -39,7 +39,7 @@ export default function ProductDrawer() {
 
         <div className="overflow-y-auto p-6 bg-white">
           <div className="aspect-video w-full bg-purple-50 rounded-lg mb-6 overflow-hidden">
-             <img src={activeProduct.image} className="w-full h-full object-contain" alt={activeProduct.name} />
+             <img src={activeProduct.image} className="w-full h-full object-coer" alt={activeProduct.name} />
           </div>
 
           <h2 className="text-3xl font-serif text-[#2E2433] mb-2">{activeProduct.name}</h2>

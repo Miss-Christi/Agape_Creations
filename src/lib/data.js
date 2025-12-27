@@ -50,7 +50,7 @@ export const PRODUCTS = [
     { id: "st24", category: "Stickers", name: "I'd Rather Have Jesus", basePrice: 99, image: "/Stickers/24.jpg", description: "Statement of priority and devotion.", hasVariants: false },
     { id: "st25", category: "Stickers", name: "Agape", basePrice: 99, image: "/Stickers/25.jpg", description: "Greek word for unconditional love.", hasVariants: false },
     { id: "st26", category: "Stickers", name: "You Are Chosen", basePrice: 99, image: "/Stickers/26.jpg", description: "Identity sticker.", hasVariants: false },
-    { id: "st27", category: "Stickers", name: "You Are Worthy", basePrice: 99, image: "/Stickers/27.jpg", description: "Self-worth affirmation.", hasVariants: false },
+    //{ id: "st27", category: "Stickers", name: "You Are Worthy", basePrice: 99, image: "/Stickers/27.jpg", description: "Self-worth affirmation.", hasVariants: false },
     { id: "st28", category: "Stickers", name: "Count Blessings", basePrice: 99, image: "/Stickers/28.jpg", description: "Gratitude reminder.", hasVariants: false },
     { id: "st29", category: "Stickers", name: "Overwhelming Love", basePrice: 99, image: "/Stickers/29.jpg", description: "Reckless love of God.", hasVariants: false },
     { id: "st30", category: "Stickers", name: "Thy Will Be Done", basePrice: 99, image: "/Stickers/30.jpg", description: "Prayer sticker.", hasVariants: false },
@@ -87,7 +87,7 @@ export const PRODUCTS = [
         // FILE 1: BADGES (Page 15) 
     { id: "bd1", category: "Badges", name: "Daughter of the King Badge", basePrice: 59, image: "/Badges/1.jpg", description: "Royal identity badge.", hasVariants: false },
     { id: "bd2", category: "Badges", name: "Psalm 91:4 Badge", basePrice: 59, image: "/Badges/2.jpg", description: "Feathers protection badge.", hasVariants: false },
-    { id: "bd3", category: "Badges", name: "Jesus Loves You Badge", basePrice: 59, image: "/Badges/3.jpg", description: "Message of love badge.", hasVariants: false },
+    //{ id: "bd3", category: "Badges", name: "Jesus Loves You Badge", basePrice: 59, image: "/Badges/3.jpg", description: "Message of love badge.", hasVariants: false },
     { id: "bd4", category: "Badges", name: "You Are Loved Badge", basePrice: 59, image: "/Badges/4.jpg", description: "Affirmation badge.", hasVariants: false },
     { id: "bd5", category: "Badges", name: "Faith Badge", basePrice: 59, image: "/Badges/5.jpg", description: "Faith badge.", hasVariants: false },
     { id: "bd6", category: "Badges", name: "Coffee Badge", basePrice: 59, image: "/Badges/6.jpg", description: "Coffee lover badge.", hasVariants: false },
@@ -146,7 +146,7 @@ export const PRODUCTS = [
     { id: "bm32", category: "Bookmarks", name: "God's Hand Reaching", basePrice: 49, image: "/Bookmarks/32.jpg", description: "Divine connection illustration.", hasVariants: false },
     { id: "bm33", category: "Bookmarks", name: "Dreams Blossom", basePrice: 49, image: "/Bookmarks/33.jpg", description: "Dreams blossom in silence.", hasVariants: false },
     { id: "bm34", category: "Bookmarks", name: "Breathe Hope Bloom", basePrice: 49, image: "/Bookmarks/34.jpg", description: "Breathe hope, bloom, flourish.", hasVariants: false },
-    { id: "bm35", category: "Bookmarks", name: "Do Not Fear", basePrice: 49, image: "/Bookmarks/35.jpg", description: "Do not fear for I am with you.", hasVariants: false },
+    { id: "bm35", category: "Bookmarks", name: "Do Not Fear", basePrice: 49, image: "/Bookmarks/35.jpg", description: "Do not fear for I am with you.", hasVariants: false, className= "rotate-45" },
     
     // FILE 2: POSTERS (Pages 5-End)
     { id: "po1", category: "Posters", name: "Faith Hope", basePrice: 299, image: "/Posters/1.jpg", description: "Hebrews 11:1 variant.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
@@ -157,7 +157,7 @@ export const PRODUCTS = [
     { id: "po6", category: "Posters", name: "Fearfully & Wonderfully Made", basePrice: 299, image: "/Posters/6.jpg", description: "Psalm 139:14 declaration of self-worth.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
     { id: "po7", category: "Posters", name: "Psalm 91 Full", basePrice: 299, image: "/Posters/7.jpg", description: "The complete text of the Psalm of protection.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
     { id: "po8", category: "Posters", name: "Saved The World", basePrice: 299, image: "/Posters/8.jpg", description: "John 3:16-17.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
-    { id: "po9", category: "Posters", name: "Stay Pawsitive", basePrice: 299, image: "/Posters/9.jpg", description: "Cute animal pun design.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
+   // { id: "po9", category: "Posters", name: "Stay Pawsitive", basePrice: 299, image: "/Posters/9.jpg", description: "Cute animal pun design.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
     { id: "po10", category: "Posters", name: "Hallelujah Definition", basePrice: 299, image: "/Posters/10.jpg", description: "Dictionary style definition of the Hebrew word.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
     { id: "po11", category: "Posters", name: "While We Were Sinners", basePrice: 299, image: "/Posters/11.jpg", description: "Romans 5:8 - Christ died for us.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
     { id: "po12", category: "Posters", name: "Forever Kinda Love", basePrice: 299, image: "/Posters/12.jpg", description: "Matthew 28:20 inspired romantic-style faith design.", hasVariants: true, variants: [{ name: "Size", options: ["A5", "A4", "A3"] }] },
