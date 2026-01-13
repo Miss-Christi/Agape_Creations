@@ -63,7 +63,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="text-center text-purple-100 text-xs">© 2025 Agape Brand. All rights reserved.</div>
+      <div className="text-center text-purple-100 text-xs">© 2025 Agape Creations. All rights reserved.</div>
     </footer>
   );
 }

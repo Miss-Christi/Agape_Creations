@@ -43,7 +43,7 @@ export default function Home() {
       <ProductDrawer />
 
       {/* 1. HERO SECTION */}
-      <section className="relative h-[50vh] md:h-[85vh] flex items-center justify-center text-center px-4 text-white overflow-hidden">        <HeroCarousel />
+      <section className="relative h-[50vh] md:h-[85vh] flex items-center justify-center text-center px-4 text-white overflow-hidden">
         <HeroCarousel />
         <div className="relative z-20 max-w-4xl space-y-4 md:space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <div className="inline-block border border-white/40 px-3 py-1 md:px-4 rounded-full text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase backdrop-blur-sm">Est. 2025</div>
