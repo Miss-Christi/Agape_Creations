@@ -16,12 +16,22 @@ export default function Home() {
 
   const { selectedCategory } = useStore();
   const [PRODUCTS, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [isStoryOpen, setIsStoryOpen] = useState(false);
+  const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
-    getProducts().then(setProducts);
+    setHasHydrated(true);
   }, []);
 
-  if (!PRODUCTS || PRODUCTS.length === 0) {
+  useEffect(() => {
+    getProducts().then((data) => {
+      setProducts(data);
+      setLoading(false);
+    });
+  }, []);
+
+  if (!hasHydrated) {    
     return <Loading />;
   }
   
