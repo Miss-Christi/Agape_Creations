@@ -43,17 +43,18 @@ export default function Home() {
       <ProductDrawer />
 
       {/* 1. HERO SECTION */}
-      <section className="relative h-[60vh] md:h-[85vh] flex items-center justify-center text-center px-4 text-white overflow-hidden">        <HeroCarousel />
-        <div className="relative z-20 max-w-4xl space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <div className="inline-block border border-white/40 px-4 py-1 rounded-full text-xs font-bold tracking-[0.3em] uppercase backdrop-blur-sm">Est. 2025</div>
-          <h1 className="text-6xl md:text-9xl font-serif leading-none tracking-tight drop-shadow-xl">
+      <section className="relative h-[50vh] md:h-[85vh] flex items-center justify-center text-center px-4 text-white overflow-hidden">        <HeroCarousel />
+        <HeroCarousel />
+        <div className="relative z-20 max-w-4xl space-y-4 md:space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <div className="inline-block border border-white/40 px-3 py-1 md:px-4 rounded-full text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase backdrop-blur-sm">Est. 2025</div>
+          <h1 className="text-4xl md:text-9xl font-serif leading-none tracking-tight drop-shadow-xl">
             Created with <br/> <span className="italic font-light">Purpose.</span>
           </h1>
           <p className="text-lg md:text-xl text-purple-100 max-w-lg mx-auto leading-relaxed drop-shadow-md">
             Wear your faith. Live your purpose.
           </p>
-          <div className="pt-4">
-             <a href="#new-arrivals" className="bg-white text-[#2E2433] px-8 py-3 rounded-full font-bold tracking-widest hover:bg-[#E0B0FF] transition shadow-lg">
+          <div className="pt-2 md:pt-4">
+             <a href="#new-arrivals" className="bg-white text-[#2E2433] px-6 py-2 md:px-8 md:py-3 text-xs md:text-base rounded-full font-bold tracking-widest hover:bg-[#E0B0FF] transition shadow-lg">
                EXPLORE
              </a>
           </div>
@@ -61,14 +62,14 @@ export default function Home() {
       </section>
 
       {/* 2. NEW ARRIVALS (Static Slice) */}
-      <section id="new-arrivals" className="py-20 max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-end mb-10">
+      <section id="new-arrivals" className="py-12 md:py-20 max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex justify-between items-end mb-6 md:mb-10">
             <div>
-                <h2 className="text-3xl font-serif text-[#2E2433]">New Arrivals</h2>
-                <p className="text-[#9F86C0]">Fresh from the studio.</p>
+                <h2 className="text-2xl md:text-3xl font-serif text-[#2E2433]">New Arrivals</h2>
+                <p className="text-xs md:text-base text-[#9F86C0]">Fresh from the studio.</p>
             </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
           {["ls1", "po8", "di6", "po31"]
             .map(id => PRODUCTS.find(p => p.id === id))
             .filter(Boolean) // ✅ remove any undefined
@@ -100,15 +101,16 @@ export default function Home() {
       <CategoryBar categories={categories} />
 
       {/* 5. MAIN FILTERED GRID */}
-      <section id="shop-grid" className="max-w-7xl mx-auto px-6 py-16 min-h-[50vh]">
-        <div className="flex items-center gap-4 mb-8">
+      <section id="shop-grid" className="max-w-[1600px] mx-auto px-4 md:px-6 py-12 md:py-16 min-h-[50vh]">
+        <div className="flex items-center gap-4 mb-6 md:mb-8">
            <div className="h-px bg-purple-200 flex-1"></div>
-           <h2 className="text-2xl font-serif text-[#2E2433] uppercase tracking-widest">{selectedCategory}</h2>
+           <h2 className="text:xl md:text-2xl font-serif text-[#2E2433] uppercase tracking-widest">{selectedCategory}</h2>
            <div className="h-px bg-purple-200 flex-1"></div>
         </div>
         
         {/* Updated Grid: sm:grid-cols-2 for tablet, md:grid-cols-3 for laptops, lg:grid-cols-4 for desktops */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-forwards">          {filteredProducts.map((product) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-forwards">          
+          {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
@@ -119,10 +121,10 @@ export default function Home() {
       </section>
 
       {/* 6. BESTSELLERS (Static Slice) */}
-      <section className="py-20 bg-purple-50">
-        <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-serif text-[#2E2433] mb-12 text-center">Community Favorites</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-16 md:py-20 bg-purple-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+            <h2 className="text-2xl md:text-3xl font-serif text-[#2E2433] mb-8 md:mb-12 text-center">Community Favorites</h2>
+            <div className="grid grid-cols-2 lg:grid-cols-3 md:gap-8">
                 {/* --- CHANGE 3: Update slice to show Posters/Skins instead of just Bookmarks --- */}
                 {/* Using indices 23-26 shows Posters from your new list */}
                 {PRODUCTS.length > 0 ? PRODUCTS.slice(109,115).map((product) => (
@@ -135,24 +137,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. BRAND STORY BREAK */}
-      <section className="py-32 relative overflow-hidden">
+      {/* 7. BRAND STORY (Toggle Flip) */}
+      <section className="py-24 md:py-32 relative overflow-hidden transition-all duration-500">
         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover opacity-20 sepia" alt="Background"/>
         <div className="absolute inset-0 bg-[#2E2433]/10"></div>
-        <div className="relative z-10 text-center max-w-xl mx-auto px-6">
-            <h2 className="text-4xl font-serif mb-6 text-[#2E2433]">Rooted in Love</h2>
-            <p className="text-lg text-[#2E2433] mb-8 font-medium">
-                "We are a small brand with a big heart. Little reminders of hope for your daily journey."
-            </p>
-            <button className="inline-block border-2 border-[#2E2433] text-[#2E2433] px-8 py-3 font-bold hover:bg-[#2E2433] hover:text-white transition rounded-full">
-                READ OUR STORY
-            </button>
+        
+        <div className="relative z-10 text-center max-w-2xl mx-auto px-6 perspective-1000">
+            {!isStoryOpen ? (
+                <div className="animate-in fade-in zoom-in duration-300">
+                    <h2 className="text-3xl md:text-4xl font-serif mb-6 text-[#2E2433]">Rooted in Love</h2>
+                    <p className="text-base md:text-lg text-[#2E2433] mb-8 font-medium">
+                        "We are a small brand with a big heart. Little reminders of hope for your daily journey."
+                    </p>
+                    <button 
+                        onClick={() => setIsStoryOpen(true)}
+                        className="inline-block border-2 border-[#2E2433] text-[#2E2433] px-8 py-3 font-bold hover:bg-[#2E2433] hover:text-white transition rounded-full text-sm md:text-base"
+                    >
+                        READ OUR STORY
+                    </button>
+                </div>
+            ) : (
+                <div className="bg-white/90 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-2xl border border-purple-100 animate-in flip-in-x duration-500 relative">
+                    <button 
+                        onClick={() => setIsStoryOpen(false)}
+                        className="absolute top-4 right-4 text-gray-400 hover:text-[#2E2433] transition"
+                    >
+                        <X size={24} />
+                    </button>
+                    <h2 className="text-2xl md:text-3xl font-serif mb-4 text-[#2E2433]">Our Journey</h2>
+                    <p className="text-sm md:text-base text-[#5D4B66] leading-relaxed mb-4 text-left">
+                        Agape Creations began with a simple prayer: to create beautiful, tangible reminders of God's love in a chaotic world. 
+                    </p>
+                    <p className="text-sm md:text-base text-[#5D4B66] leading-relaxed text-left">
+                        What started as a few sketches has grown into a community of believers who wear their faith proudly. Every design is crafted with intention, prayer, and—most importantly—Agape love.
+                    </p>
+                    <div className="mt-6 pt-6 border-t border-purple-100">
+                        <p className="font-handwriting text-2xl text-[#8C6A9E] transform -rotate-2">Miss Christi</p>
+                        <p className="text-xs uppercase tracking-widest text-gray-400 mt-1">Founder</p>
+                    </div>
+                </div>
+            )}
         </div>
       </section>
 
       {/* 8. TESTIMONIALS */}
 
-      <div className="bg-purple-200 py-16 text-black relative overflow-hidden">
+      <div className="bg-purple-200 py-12 md:py-16 text-black relative overflow-hidden">
         {/* Decorative background element */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
           <div className="absolute right-0 top-0 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
@@ -162,54 +192,45 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-3xl font-bold text-center mb-12 tracking-tight">What Our Community Says</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-3 md:gap-8">
             {/* Testimonial 1 */}
-            <div className="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-700/50">
-              <div className="text-4xl text-indigo-400 font-serif leading-none mb-4">"</div>
-              <p className="text-lg text-purple-900 italic mb-6">
-              I got the ‘Trust in the Lord’ diary and one of the posters for my room. Writing in it's become a quiet moment with God in the morning when I get up.             
+            <div className="bg-white/50 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border border-indigo-700/50">
+              <div className="text-2xl md:text-4xl text-indigo-400 font-serif leading-none mb-2 md:mb-4">"</div>
+              <p className="text-xs md:text-lg text-purple-900 italic mb-4 line-clamp-4 md:line-clamp-none">
+                The quality is amazing! It's so soft and the message starts so many conversations.
               </p>
               <div className="flex items-center">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-lg shadow-lg">
-                  J
-                </div>
-                <div className="ml-3">
-                  <p className="font-semibold text-purple-900">Jose George.</p>
-                  <p className="text-purple-900 text-sm">Verified Buyer</p>
+                <div className="h-6 w-6 md:h-10 md:w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-xs md:text-lg shadow-lg">S</div>
+                <div className="ml-2 md:ml-3">
+                  <p className="font-semibold text-purple-900 text-[10px] md:text-base">Sarah J.</p>
                 </div>
               </div>
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-700/50">
-              <div className="text-4xl text-indigo-400 font-serif leading-none mb-4">"</div>
-              <p className="text-lg text-purple-900 italic mb-6">
-              I put up one of the posters in my study corner, and it's like a quiet motivation and reminder for me to pray
+            <div className="bg-white/50 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border border-indigo-700/50">
+              <div className="text-2xl md:text-4xl text-indigo-400 font-serif leading-none mb-2 md:mb-4">"</div>
+              <p className="text-xs md:text-lg text-purple-900 italic mb-4 line-clamp-4 md:line-clamp-none">
+                Fast delivery. The daily grace journal is essential to my morning routine.
               </p>
               <div className="flex items-center">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-lg shadow-lg">
-                  M
-                </div>
-                <div className="ml-3">
-                  <p className="font-semibold text-purple-900">Michael D'Souza.</p>
-                  <p className="text-purple-900 text-sm">Verified Buyer</p>
+                <div className="h-6 w-6 md:h-10 md:w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-xs md:text-lg shadow-lg">M</div>
+                <div className="ml-2 md:ml-3">
+                  <p className="font-semibold text-purple-900 text-[10px] md:text-base">Mike R.</p>
                 </div>
               </div>
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white/50 backdrop-blur-sm p-8 rounded-2xl border border-indigo-700/50">
-              <div className="text-4xl text-indigo-400 font-serif leading-none mb-4">"</div>
-              <p className="text-lg text-purple-900 italic mb-6">
-              I love these badges! I gave a couple to my friends, and have one on my college bag. Whenever I see it, it kinda just makes me smile and reminds me that God is always with me.
+            <div className="bg-white/50 backdrop-blur-sm p-4 md:p-8 rounded-xl md:rounded-2xl border border-indigo-700/50">
+              <div className="text-2xl md:text-4xl text-indigo-400 font-serif leading-none mb-2 md:mb-4">"</div>
+              <p className="text-xs md:text-lg text-purple-900 italic mb-4 line-clamp-4 md:line-clamp-none">
+                My sister loves the tote bag. Print quality is fantastic. Highly recommend!
               </p>
               <div className="flex items-center">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-lg shadow-lg">
-                  M
-                </div>
-                <div className="ml-3">
-                  <p className="font-semibold text-purple-900">Mary Elizabeth.</p>
-                  <p className="text-purple-900 text-sm">Verified Buyer</p>
+                <div className="h-6 w-6 md:h-10 md:w-10 rounded-full bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center font-bold text-white text-xs md:text-lg shadow-lg">P</div>
+                <div className="ml-2 md:ml-3">
+                  <p className="font-semibold text-purple-900 text-[10px] md:text-base">Priya K.</p>
                 </div>
               </div>
             </div>
