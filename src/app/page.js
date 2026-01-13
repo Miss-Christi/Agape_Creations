@@ -43,8 +43,7 @@ export default function Home() {
       <ProductDrawer />
 
       {/* 1. HERO SECTION */}
-      <section className="relative h-[85vh] flex items-center justify-center text-center px-4 text-white overflow-hidden">
-        <HeroCarousel />
+      <section className="relative h-[60vh] md:h-[85vh] flex items-center justify-center text-center px-4 text-white overflow-hidden">        <HeroCarousel />
         <div className="relative z-20 max-w-4xl space-y-6 animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <div className="inline-block border border-white/40 px-4 py-1 rounded-full text-xs font-bold tracking-[0.3em] uppercase backdrop-blur-sm">Est. 2025</div>
           <h1 className="text-6xl md:text-9xl font-serif leading-none tracking-tight drop-shadow-xl">
@@ -109,8 +108,7 @@ export default function Home() {
         </div>
         
         {/* Updated Grid: sm:grid-cols-2 for tablet, md:grid-cols-3 for laptops, lg:grid-cols-4 for desktops */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-forwards">
-          {filteredProducts.map((product) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-forwards">          {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
