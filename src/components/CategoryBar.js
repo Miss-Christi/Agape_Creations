@@ -1,9 +1,9 @@
 "use client";
 import { useStore } from '../store/useStore';
-import { Scroll, Sticker, BookOpen, Laptop, CircleStar, Sparkles } from 'lucide-react';
+import { Scroll, Sticker, BookOpen, Laptop, CircleStar, Sparkles, Bookmark } from 'lucide-react';
 
-export default function CategoryBar() {
-  const { selectedCategory, setCategory } = useStore();
+export default function CategoryBar({ categories }) {
+  const { selectedCategory, setSelectedCategory } = useStore();
 
   const CATEGORIES = [
     { name: "All", icon: <Sparkles size={18} /> },
@@ -12,6 +12,7 @@ export default function CategoryBar() {
     { name: "Diaries", icon: <BookOpen size={18} /> },
     { name: "Laptop Skins", icon: <Laptop size={18} /> },
     { name: "Badges", icon: <CircleStar size={18} /> },
+    { name: "Bookmarks", icon: <Bookmark size={18} /> },
   ];
 
   return (
@@ -23,7 +24,7 @@ export default function CategoryBar() {
             <button 
               key={cat.name} 
               onClick={() => {
-                setCategory(cat.name);
+                setSelectedCategory(cat.name);
                 document.getElementById('shop-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
               className={`flex flex-col items-center gap-1 min-w-[60px] transition-all group py-1 ${
